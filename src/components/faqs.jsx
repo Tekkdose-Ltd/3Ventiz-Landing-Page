@@ -1,4 +1,5 @@
 import React from "react";
+import plus from "../assets/images/Plus.png"
 
 export default function Faqs() {
   return (
