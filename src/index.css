@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  font-size: 62.5%;
+}
+#root{
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
+.Container {
+  @apply container mx-auto px-8 sm:px-8 md:px-28;
+}
+.primary-color{
+  color: rgba(34, 31, 203, 1);
+}
+/* rgba(2, 1, 29, 1) */
+.primary-bg{
+  background-color: rgba(34, 31, 203, 1);
+}
+.primary-darkbg{
+  background-color: rgba(4, 3, 72, 1);
+}
+
+.text-color{
+  color: rgba(52, 51, 48, 1);
+}
+.step-card{
+background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0));
+}

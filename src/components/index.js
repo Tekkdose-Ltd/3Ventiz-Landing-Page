@@ -1,0 +1,8 @@
+export {default as Navbar} from "./navbar"
+export {default as Footer} from "./footer"
+export {default as HeroSection} from "./heroSection"
+export {default as About} from "./about"
+export {default as HowItWorks} from "./howItWorks"
+export {default as VentisLogo} from "./3ventis"
+export {default as UserSection} from "./userSection"
+export {default as Faqs} from "./faqs"
