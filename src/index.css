@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+}
 html{
   font-size: 62.5%;
 }
@@ -9,7 +13,12 @@ html{
   padding: 0 !important;
   max-width: 100% !important;
 }
-
+a, p{
+  font-family: "Inter", serif;
+}
+.strong, button {
+  font-family: 'General Sans', sans-serif;
+}
 .Container {
   @apply container mx-auto px-8 sm:px-8 md:px-28;
 }
@@ -29,4 +38,52 @@ html{
 }
 .step-card{
 background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0));
+}
+.abscenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.animate-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 157px; /* Or your desired fixed width */
+}
+
+
+/* Optional: Add a subtle scale effect on hover */
+.animate-btn:active {
+  transform: scale(0.98);
+}
+
+/* Optional: Add a glow effect on hover */
+.animate-btn:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: inherit;
+}
+
+
+.slick-list, .slick-track{
+  height: 100%;
+}
+.slick-slide {
+  width: 584px !important;
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
 }

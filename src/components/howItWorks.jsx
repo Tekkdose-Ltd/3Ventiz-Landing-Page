@@ -6,12 +6,13 @@ export default function HowItWorks() {
       <div className="Container">
         <div className="grid gap-4 max-w-[346px] w-full">
           <p
+          data-aos="fade-up"
             style={{ color: "rgba(173, 172, 218, 1)" }}
             className="text-[1.4rem] leading-[1.8rem]"
           >
             HOW IT WORKS
           </p>
-          <p className="text-[2.8rem] leading-[3.4rem] font-medium text-white">
+          <p data-aos="fade-up" className="text-[2.8rem] strong leading-[3.4rem] font-medium text-white">
             Plan Your Event in Just a Few Steps
           </p>
         </div>
@@ -53,18 +54,19 @@ export default function HowItWorks() {
 const StepsCard = ({ text, title, num }) => {
   return (
     <div 
+    data-aos="fade-up"
     style={{
       backgroundColor: "rgba(255, 255, 255, 0.1)",
     }}
     className="p-8 rounded-[2rem] grid gap-4"
    >
-      <p className="text-[14rem] leading-[15.6rem] font-bold text-white opacity-[0.1]">
+      <p data-aos="fade-up" className="text-[14rem] leading-[15.6rem] font-bold text-white !opacity-[0.1]">
         {num}
       </p>
-      <p className="text-[2rem] leading-[2.8rem] font-medium text-white">
+      <p data-aos="fade-up" className="text-[2rem] strong leading-[2.8rem] font-medium text-white">
         {title}
       </p>
-      <p className="text-[1.4rem] leading-[2rem] text-white max-w-[35rem] w-full">{text}</p>
+      <p data-aos="fade-up" className="text-[1.4rem] leading-[2rem] text-white max-w-[35rem] w-full">{text}</p>
     </div>
   );
 };
