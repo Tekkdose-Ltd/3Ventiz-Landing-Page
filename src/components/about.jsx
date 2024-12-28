@@ -3,7 +3,7 @@ import ticket from "../assets/images/ticket creation.png";
 import tracking from "../assets/images/tracking.png";
 import delivery from "../assets/images/delivery.png";
 import management from "../assets/images/management.png";
-import vendor from "../assets/images/vendor icon.png";
+import vendor from "../assets/images/vendor Icon.png";
 import pricing from "../assets/images/Pricing Icon.png";
 import communication from "../assets/images/communication.png";
 import secure from "../assets/images/secure.png";
