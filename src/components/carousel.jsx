@@ -54,7 +54,7 @@ export default function Carousel({ slides }) {
     },
     [
       // Autoplayy({ delay: 2000, jump: false }),
-      AutoScroll({ playOnInit: true,speed:2 })
+      AutoScroll({ playOnInit: true,speed:1 })
     ],
   );
   return (
