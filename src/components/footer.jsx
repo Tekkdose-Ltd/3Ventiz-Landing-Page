@@ -23,7 +23,7 @@ export default function Footer() {
   return (
     <footer className="bg-white p-8">
       <div className="rounded-[2rem] primary-darkbg p-8">
-        <div className="grid md:grid-cols-[350px_1fr] gap-8 md:gap-32">
+        <div className="grid md+:grid-cols-[350px_1fr] gap-8 md:gap-32">
           <div className="text-left grid gap-8">
             <VentisLogo clr="white" />
 
@@ -42,7 +42,7 @@ export default function Footer() {
                 borderColor: "rgba(255, 255, 255, 0.1)",
               }}
               data-aos="fade-up"
-              className="flex items-center gap-2 sm:gap-4 justify-between mt-4 max-w-[350px] w-full rounded-[1rem] p-2 pl-4 border "
+              className="flex items-center gap-2 justify-between mt-4 max-w-[350px] w-full rounded-[1rem]  pl-4 border "
             >
               <input
                 type="email"
@@ -51,12 +51,12 @@ export default function Footer() {
                 className="flex-1 text-[1.4rem] outline-none text-gray-400 bg-transparent"
                 placeholder="Enter email address"
               />
-              <button className="bg-white primary-color font-semibold text-[1.2rem] sm:text-[1.4rem] px-4 sm:px-[1.8rem] py-3 sm:py-6 rounded-[6px] ">
+              <button className="bg-white primary-color font-medium text-[1.2rem] sm:text-[1.4rem] px-4 sm:px-[1.8rem] py-2  rounded-[6px] ">
                 Join waitlist
               </button>
             </div>
 
-            <ul data-aos="fade-up" className="mt-8 flex items-center gap-6">
+            <ul data-aos="fade-up" className="mt-8 flex items-center gap-10">
               <li>
                 <a href="https://www.linkedin.com/company/106094219/admin/dashboard/" rel="noreferrer" target="_blank" className="">
                   <img src={linkedin} alt="footer logo" className="" />
@@ -88,11 +88,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-8">
+          <div className="grid md+:grid-cols-3 gap-8">
             <div>
               <p
                 data-aos="fade-up"
-                className="font-medium text-[1.6rem] leading-[28px] opacity-[0.6] text-white"
+                className="font-medium text-[1.6rem] leading-[28px] !opacity-[0.6] text-white"
               >
                 COMPANY
               </p>
@@ -130,7 +130,7 @@ export default function Footer() {
             <div>
               <p
                 data-aos="fade-up"
-                className="font-medium text-[1.6rem] leading-[28px] uppercase opacity-[0.6] text-white"
+                className="font-medium text-[1.6rem] leading-[28px] uppercase !opacity-[0.6] text-white"
               >
                 Solutions
               </p>
@@ -154,7 +154,7 @@ export default function Footer() {
             <div>
               <p
                 data-aos="fade-up"
-                className="font-medium text-[1.6rem] leading-[28px] opacity-[0.6] text-white"
+                className="font-medium text-[1.6rem] leading-[28px] !opacity-[0.6] text-white"
               >
                 LEGAL
               </p>

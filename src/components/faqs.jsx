@@ -13,7 +13,7 @@ export default function Faqs() {
           <p data-aos="fade-up" className="text-[2.8rem] strong font-medium leading-[3.4rem] max-w-[450px] w-full ">
             Got Questions? We’ve Got Answers.
           </p>
-          <p data-aos="fade-up" className="text-[1.4rem] leading-[2rem] text-color max-w-[400px] ">
+          <p data-aos="fade-up" className="text-[1.4rem] leading-[2rem] text-color md+:max-w-[400px] ">
             Find quick solutions and clear explanations for everything you need
             to know about 3ventiz
           </p>

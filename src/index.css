@@ -15,12 +15,17 @@ html{
 }
 a, p{
   font-family: "Inter", serif;
+  letter-spacing: -0.025em;
+  
 }
 .strong, button {
   font-family: 'General Sans', sans-serif;
 }
+button{
+  letter-spacing: -0.025em;
+}
 .Container {
-  @apply container mx-auto px-8 sm:px-8 md:px-28;
+  @apply  mx-auto w-full p-[6.4rem] px-[4rem] xl:px-[14rem] ;
 }
 .primary-color{
   color: rgba(34, 31, 203, 1);
@@ -84,6 +89,10 @@ background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0
 .embla__container {
   display: flex;
 }
+
 .embla__slide {
-  flex: 0 0 100%;
+  flex: 0 0 auto; /* Adapt slide size to its content */
+  min-width: 0;
+  max-width: 100%; /* Prevent from growing larger than viewport */
 }
+

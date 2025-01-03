@@ -5,11 +5,11 @@ export default function HeroSection() {
   return (
     <div
       style={{ backgroundImage: `url(${hero})`, backgroundSize: "100% 100%" }}
-      className="bg-no-repeat h-[723px] sm:h-[1021px] lg:h-[1195px] w-full"
+      className="bg-no-repeat h-full  md+:h-[1021px] lg:h-[1195px] w-full"
     >
-      <div className="Container mb-8 pt-28">
+      <div className="Container !pb-0 mb-8 pt-28">
         
-        <div className="relative mx-auto max-w-[600px] w-full  py-12">
+        <div className="relative mx-auto md+:max-w-[600px] w-full  py-12">
           {/* <img data-aos="zoom-in-up" src={calender} alt="calender logo" className="absolute top-[4rem] left-[-6rem]  sm:left-[2rem]  z-[1000]" /> */}
           <div className="flex justify-center">
             <div
@@ -39,10 +39,10 @@ export default function HeroSection() {
               </span>
             </div>
           </div>
-          <div className="grid justify-center items-center mt-8">
+          <div className="grid justify-center items-center mt-12">
             <p
               data-aos="zoom-in-up"
-              className="strong text-[3rem] xs:text-[4rem] sm:text-[6.4rem] text-center font-semibold primary-color leading-[40px] sm:leading-[70px]"
+              className="strong  text-[4rem] md+:text-[6.4rem] text-center font-semibold primary-color leading-[40px] md+:leading-[70px]"
             >
               Plan{" "}
               <span className="font-light text-color">Memorable Events</span>{" "}
@@ -50,7 +50,7 @@ export default function HeroSection() {
             </p>
             <p
               data-aos="zoom-in-up"
-              className="max-w-[420px] w-full mx-auto text-center text-[1.2rem] sm:text-[1.4rem] text-color"
+              className="md+:max-w-[420px] w-full mx-auto text-center leading-[2rem] text-[1.4rem] text-color"
             >
               Discover reliable vendors, manage your budget, and plan your
               events seamlessly—all in one platform designed to simplify your
@@ -59,17 +59,17 @@ export default function HeroSection() {
           </div>
           <div
             data-aos="zoom-in-up"
-            style={{ backgroundColor: "rgba(220, 220, 222, 1)" }}
-            className="flex items-center gap-2 sm:gap-4 justify-between mt-4 max-w-[350px] w-full mx-auto  rounded-[1rem] p-2 pl-4 border border-[rgba(220, 220, 222, 1)] "
+            style={{  borderColor:"rgba(220, 220, 222, 1)" }}
+            className="flex items-center justify-between mt-4 max-w-[350px] w-full mx-auto  rounded-[1rem] p-1 pl-4 border-[2px] opacity-[0.3] "
           >
             <input
               type="email"
               name="email"
               id=""
               className="flex-1 text-[1.4rem] outline-none text-gray-400 bg-transparent"
-              placeholder="Enter email address"
+              placeholder="name@email.com"
             />
-            <button className="primary-bg text-white text-[1.2rem] sm:text-[1.4rem] px-4 sm:px-[1.8rem] py-3 sm:py-6 rounded-[6px] ">
+            <button className="primary-bg text-white text-[1.2rem] sm:text-[1.4rem] px-4 sm:px-[2.5rem] py-3  rounded-[4px] ">
               Join waitlist
             </button>
           </div>

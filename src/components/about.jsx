@@ -15,27 +15,43 @@ import smline2 from "../assets/images/smline2.png";
 
 export default function About() {
   return (
-    <div className="Container py-16 grid gap-8">
-      <p data-aos="fade-up" className="primary-color text-[1.4rem] text-left">ABOUT US</p>
-      <div className="text-left grid gap-4 ">
-        <p data-aos="fade-up" className="text-[2.8rem] strong font-medium leading-[34px] max-w-[450px] w-full ">
-          We are redefining the digital space of event planning
+    <div className="Container grid gap-16">
+      <div className="grid gap-8">
+        <p data-aos="fade-up" className="primary-color text-[1.4rem] text-left">
+          ABOUT US
         </p>
-        <p data-aos="fade-up" className="text-[1.4rem] leading-[20px] text-color max-w-[400px] ">
-          At 3ventiz, we bridge the gap between hosts and vendors, making event
-          planning simple, transparent, and stress-free
-        </p>
+        <div className="text-left grid gap-4 ">
+          <p
+            data-aos="fade-up"
+            className="text-[2.8rem] strong font-medium leading-[34px] md+:max-w-[450px] w-full "
+          >
+            We are redefining the digital space of event planning
+          </p>
+          <p
+            data-aos="fade-up"
+            className="text-[1.4rem] leading-[20px] text-color w-full md+:max-w-[400px] "
+          >
+            At 3ventiz, we bridge the gap between hosts and vendors, making
+            event planning simple, transparent, and stress-free
+          </p>
+        </div>
       </div>
       <div
         style={{ backgroundColor: "rgba(245, 245, 250, 1)" }}
-        className="p-12 px-4 md:px-20 rounded-[2rem]"
+        className="p-12 px-4 sm:px-12 md+:px-20 rounded-[2rem]"
       >
         <div className="text-center grid gap-4">
-          <p data-aos="fade-up" className="text-[1.4rem] leading-[18px] primary-color ">
+          <p
+            data-aos="fade-up"
+            className="text-[1.4rem] leading-[18px] primary-color "
+          >
             WHAT MAKES US DIFFERENT?
           </p>
-          <p data-aos="fade-up" className="text-[2.8rem] strong font-medium leading-[34px] w-full ">
-            Streamlining {" "}
+          <p
+            data-aos="fade-up"
+            className="text-[2.8rem] strong font-medium leading-[34px] w-full "
+          >
+            Streamlining{" "}
             <span className="relative hidden sm:inline">
               <img
                 src={ticketline}
@@ -45,12 +61,8 @@ export default function About() {
               event ticketing
             </span>{" "}
             <span className="relative inline sm:hidden">
-              <img
-                src={smline1}
-                alt=""
-                className="absolute left-0 w-full"
-              />
-              event 
+              <img src={smline1} alt="" className="absolute left-0 w-full" />
+              event
             </span>{" "}
             <span className="relative inline sm:hidden">
               <img
@@ -58,17 +70,20 @@ export default function About() {
                 alt=""
                 className="absolute left-0 top-0 h-[5px] w-full"
               />
-               ticketing
+              ticketing
             </span>{" "}
             like never before
           </p>
-          <p data-aos="fade-up" className="text-[1.4rem] leading-[20px] mx-auto text-color max-w-[400px] w-full ">
+          <p
+            data-aos="fade-up"
+            className="text-[1.4rem] leading-[20px] mx-auto text-color md+:max-w-[400px] w-full "
+          >
             Create, sell, and manage event tickets effortlessly with our
             all-in-one platform. Track real-time sales and attendee information
             to ensure a successful event.
           </p>
         </div>
-        <div className="pt-20 grid md:grid-cols-2 gap-8 md:gap-20">
+        <div className="pt-20 grid md+:grid-cols-2 gap-8 md:gap-20">
           <AboutCard
             text=" Set up and sell tickets quickly with easy tools to customize
           pricing, availability, and ticket types."
@@ -92,7 +107,7 @@ export default function About() {
           />
         </div>
       </div>
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md+:grid-cols-3 gap-8">
         <FeatureCard
           text="Find the perfect vendors with our easy-to-use search and budget-matching filters."
           title="Discover Vendors"
@@ -131,13 +146,22 @@ export default function About() {
 const AboutCard = ({ text, title, img }) => {
   return (
     <div data-aos="fade-up" className="flex gap-8 items-center just">
-      <img data-aos="fade-up" src={img} alt="about card logo" className="w-[80px]" />
-      <div className="text-left">
-        <p  data-aos="fade-up"className="font-medium strong text-[2rem] leading-[28px] text-color">
+      <img
+        data-aos="fade-up"
+        src={img}
+        alt="about card logo"
+        className="w-[80px]"
+      />
+      <div className="text-left grid gap-4">
+        <p
+          data-aos="fade-up"
+          className="font-medium strong text-[2rem] leading-[28px] text-color"
+        >
           {title}
         </p>
 
-        <p data-aos="fade-up"
+        <p
+          data-aos="fade-up"
           className="text-[1.4rem] leading-[20px] "
           style={{ color: "rgba(125, 125, 122, 1)" }}
         >
@@ -151,11 +175,21 @@ const AboutCard = ({ text, title, img }) => {
 const FeatureCard = ({ text, title, img }) => {
   return (
     <div data-aos="fade-down" className="grid gap-4 text-left">
-      <img  style={{ borderColor: "rgba(34, 31, 203, .1)" }} data-aos="fade-down" src={img} alt="about card logo" className="size-16 border-b-2 rounded-[8px]" />
-      <p data-aos="fade-down" className="font-medium strong text-[2rem] leading-[28px] text-color">
+      <img
+        style={{ borderColor: "rgba(34, 31, 203, .1)" }}
+        data-aos="fade-down"
+        src={img}
+        alt="about card logo"
+        className="w-[4.5rem] h-[4.5rem] border-b-[3px]  rounded-[8px]"
+      />
+      <p
+        data-aos="fade-down"
+        className="font-medium strong text-[2rem] leading-[28px] text-color"
+      >
         {title}
       </p>
-      <p data-aos="fade-down"
+      <p
+        data-aos="fade-down"
         className="text-[1.4rem] leading-[20px] "
         style={{ color: "rgba(125, 125, 122, 1)" }}
       >

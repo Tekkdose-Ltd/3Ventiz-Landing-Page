@@ -34,7 +34,7 @@ export default function UserSection() {
           </p>
           <p
             data-aos="fade-up"
-            className="text-[1.4rem] leading-[2rem] text-color max-w-[400px] "
+            className="text-[1.4rem] leading-[2rem] text-color md+:max-w-[400px] "
           >
             3ventiz connects event planners with trusted vendors, making
             planning seamless and business growth effortless
@@ -42,10 +42,10 @@ export default function UserSection() {
         </div>
       </div>
       <div className="grid gap-6">
-        <div className="grid md:grid-cols-[32rem_1fr] gap-8  md:h-[400px]">
+        <div className="grid md+:grid-cols-[32rem_1fr] gap-8  md+:h-[400px]">
           <div
             style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
-            className="rounded-[1.6rem] p-8 flex flex-col gap-8 justify-between items-start"
+            className="rounded-[1.6rem] p-8 flex flex-col gap-24 justify-between items-start"
           >
             <div className="grid gap-6">
               <p
@@ -57,7 +57,7 @@ export default function UserSection() {
               <p
                 data-aos="fade-up"
                 style={{ color: "rgba(2, 1, 29, 1)" }}
-                className="text-[1.4rem] leading-[2rem]  max-w-[27rem] "
+                className="text-[1.4rem] leading-[2rem] md+:max-w-[27rem] "
               >
                 Showcase your services, connect with more clients, and manage
                 bookings effortlessly. 3ventiz is your partner for business
@@ -71,14 +71,14 @@ export default function UserSection() {
               />
             </div>
           </div>
-          <div className="overflow-hidden rounded-[1.6rem] h-[23.4rem] sm:h-[40rem] w-full">
+          <div className="overflow-hidden rounded-[1.6rem] h-[23.4rem] md+:h-[40rem] w-full">
             <Carousel slides={vendorSlide} />
           </div>
         </div>
-        <div className="grid md:grid-cols-[1fr_32rem] gap-8  md:h-[400px]">
+        <div className="grid md+:grid-cols-[1fr_32rem] gap-8  md:h-[400px]">
           <div
             style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
-            className="rounded-[1.6rem] md:order-2 p-8 flex flex-col gap-8 justify-between items-start"
+            className="rounded-[1.6rem] md+:order-2 p-8 flex flex-col gap-24 justify-between items-start"
           >
             <div className="grid gap-6">
               <p
@@ -90,7 +90,7 @@ export default function UserSection() {
               <p
                 data-aos="fade-up"
                 style={{ color: "rgba(2, 1, 29, 1)" }}
-                className="text-[1.4rem] leading-[2rem]  max-w-[27rem] "
+                className="text-[1.4rem] leading-[2rem]  md+:max-w-[27rem] "
               >
                 Whether you’re planning a wedding, birthday, corporate event, or
                 baby shower, 3ventiz helps you find trusted vendors, stay within
@@ -104,8 +104,7 @@ export default function UserSection() {
               />
             </div>
           </div>
-          <div className="overflow-hidden sm:order-1 h-[23.4rem] sm:h-[40rem] w-full rounded-[1.6rem]">
-            {/* <img src={wedding} alt="vendor image" className="" /> */}
+          <div className="overflow-hidden md+:order-1 h-[23.4rem] md+:h-[40rem] w-full rounded-[1.6rem]">
             <Carousel slides={clientSlide} />
           </div>
         </div>

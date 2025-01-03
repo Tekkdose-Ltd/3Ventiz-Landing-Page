@@ -7,7 +7,7 @@ export default function Accordion() {
     {
       key: 1,
       title: "How does 3ventiz help me plan my event?",
-      data: `3ventiz connects you with reliable vendors, offers budget-matching tools, and provides planning features like checklists and reminders to ensure a smooth and stress-free event planning experience.3ventiz connects you with reliable vendors, offers budget-matching tools, and provides planning features like checklists and reminders to ensure a smooth and stress-free event planning experience.`,
+      data: `3ventiz connects you with reliable vendors, offers budget-matching tools, and provides planning features like checklists and reminders to ensure a smooth and stress-free event planning experience.`,
       isOpen: false,
     },
     {
@@ -88,10 +88,17 @@ function AccordionComp(props) {
          transition duration-300 flex items-center gap-8 `}
         onClick={props.toggleAccordion}
       >
+        {/* <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+<path d="M3.125 10H16.875" stroke="#02011D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 3.125V16.875" stroke="#02011D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> */}
         <img src={props.isOpen?minus:plus} alt="" />
-        <p className="font-medium text-[1.6rem] leading-[2.4rem] align-bottom ">
+
+        <p className={`font-medium text-[1.6rem] leading-[2.4rem] align-bottom ${!props.isOpen && "opacity-[0.1]"}`}>
           {props.title}{" "}
         </p>
+
+        
         {/* <span className={`float-right transform ${props.isOpen ?  
                                  'rotate-180' : 'rotate-0'}  
                                  transition-transform duration-300`}> 

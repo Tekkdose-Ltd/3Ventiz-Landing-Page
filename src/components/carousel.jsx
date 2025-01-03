@@ -23,45 +23,31 @@ const slides = [
 ];
 
 export default function Carousel({ slides }) {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 800,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    cssEase: "cubic-bezier(0.87, 0, 0.13, 1)", // Smooth easing
-    pauseOnHover: false,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 500,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
 
- 
 
-  const [emblaRef] = useEmblaCarousel(
+ const slidesToShow = 3
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
       dragFree: true,
+      // slidesToScroll:3,
+      inViewThreshold:1
     },
     [
       // Autoplayy({ delay: 2000, jump: false }),
       AutoScroll({ playOnInit: true,speed:1 })
     ],
   );
+  
+  useEffect(() => {
+    if (emblaApi) console.log(emblaApi.slidesInView())
+  }, [emblaApi])
   return (
     <>
      
         <div className="embla h-full" ref={emblaRef}>
-          <div className="embla__container h-full !w-[342px] sm:!w-[700px]">
+          <div className="embla__container h-full !w-[342px] md+:!w-[584px]">
             {slides.map((slide, i) => (
               <div className="embla__slide w-full ">
                 <img
