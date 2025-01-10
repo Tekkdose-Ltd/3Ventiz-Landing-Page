@@ -32,25 +32,9 @@ export default function About() {
             className="text-[2.8rem] strong font-medium leading-[34px] w-full "
           >
             Streamlining{" "}
-            <span className="relative hidden sm:inline">
-              <img
-                src={ticketline}
-                alt=""
-                className="absolute left-10 w-full"
-              />
+            <span className="relative bg-gradient-to-r from-[#171591] via-[#3B81AF]  to-[#3B81AF] bg-clip-text text-transparent">
+          
               event ticketing
-            </span>{" "}
-            <span className="relative inline sm:hidden">
-              <img src={smline1} alt="" className="absolute left-0 w-full" />
-              event
-            </span>{" "}
-            <span className="relative inline sm:hidden">
-              <img
-                src={smline2}
-                alt=""
-                className="absolute left-0 top-0 h-[5px] w-full"
-              />
-              ticketing
             </span>{" "}
             like never before
           </p>

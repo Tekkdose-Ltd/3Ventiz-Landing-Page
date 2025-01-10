@@ -46,7 +46,7 @@ export default function Waitlist({ close }) {
               <button style={{backgroundColor:"rgba(175, 176, 175, 1)"}} className="rounded-[12px] p-[1.4rem] px-[20px] text-center strong font-medium text-[1.4rem] leading-[18px] text-white">Continue</button>
             </div>
           </div>
-          <span onClick={close} className="absolute top-8 right-8">
+          <span onClick={close} className="absolute top-8 right-8 cursor-pointer">
             <XMarkIcon aria-hidden="true" className="size-10 " color="black" />
           </span>
         </div>

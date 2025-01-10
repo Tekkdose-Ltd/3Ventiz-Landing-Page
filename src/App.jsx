@@ -42,7 +42,10 @@ function App() {
             data-aos="fade-up"
             className="text-[3rem] strong sm:text-[4rem] md+:text-[6.4rem] leading-[48px] md+:leading-[72px] font-medium "
           >
-            Your Dream Event is Just a Click Away
+            Your Dream Event is Just a{" "}
+            <span className="relative bg-gradient-to-r from-[#171591] via-[#3B81AF]  to-[#3B81AF] bg-clip-text text-transparent">
+              Click Away
+            </span>{" "}
           </p>
           <p
             data-aos="fade-up"
@@ -52,7 +55,10 @@ function App() {
             plan their events. Whether you’re hosting or providing services,
             3ventiz is your go-to platform for stress-free event management.
           </p>
-          <div data-aos="fade-up" className="flex items-center justify-center w-full">
+          <div
+            data-aos="fade-up"
+            className="flex items-center justify-center w-full"
+          >
             <AnimatedButton text="Join Waitlist" />
           </div>
         </div>

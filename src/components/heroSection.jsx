@@ -16,11 +16,9 @@ export default function HeroSection() {
           <div className="grid gap-8 ">
             <p
               data-aos="zoom-in-up"
-              className="strong  text-[4rem] md+:text-[6.4rem]  text-white leading-[40px] md+:leading-[70px]"
+              className="strong font-normal  text-[4rem] md+:text-[6.4rem]  text-white leading-[40px] md+:leading-[70px]"
             >
-              Plan{" "}
-              <span className="font-light text-white">Memorable Events</span>{" "}
-              with Ease
+              Plan Memorable Events with Ease
             </p>
             <p
               data-aos="zoom-in-up"
