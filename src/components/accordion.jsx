@@ -8,7 +8,7 @@ export default function Accordion() {
       key: 1,
       title: "How does 3ventiz help me plan my event?",
       data: `3ventiz connects you with reliable vendors, offers budget-matching tools, and provides planning features like checklists and reminders to ensure a smooth and stress-free event planning experience.`,
-      isOpen: false,
+      isOpen: true,
     },
     {
       key: 2,
@@ -66,7 +66,11 @@ export default function Accordion() {
     setAccordion(updatedAccordions);
   };
   return (
-    <div data-aos="fade-up" style={{backgroundColor:"rgba(244, 247, 247, 1)"}} className="border rounded-[1.2rem] p-2">
+    <div
+      data-aos="fade-up"
+      style={{ backgroundColor: "rgba(244, 247, 247, 1)" }}
+      className="border rounded-[1.2rem] p-2"
+    >
       {accordions.map((accordion) => (
         <AccordionComp
           key={accordion.key}
@@ -82,30 +86,61 @@ export default function Accordion() {
 
 function AccordionComp(props) {
   return (
-    <div  className="rounded-[1.2rem] overflow-hidden">
+    <div className="rounded-[1.2rem] overflow-hidden">
       <button
-        className={`w-full p-4 text-left ${props.isOpen?"bg-white":"bg-transparent"}
+        className={`w-full p-4 text-left ${
+          props.isOpen ? "bg-white" : "bg-transparent"
+        }
          transition duration-300 flex items-center gap-8 `}
         onClick={props.toggleAccordion}
       >
-        {/* <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-<path d="M3.125 10H16.875" stroke="#02011D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10 3.125V16.875" stroke="#02011D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg> */}
-        <img src={props.isOpen?minus:plus} alt="" />
+        {props.isOpen ? (
+          <img src={minus} alt="" />
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            className="opacity-[0.3]"
+          >
+            <path
+              d="M3.125 10H16.875"
+              stroke="#02011D"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 3.125V16.875"
+              stroke="#02011D"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        )}
 
-        <p className={`font-medium text-[1.6rem] leading-[2.4rem] align-bottom ${!props.isOpen && "opacity-[0.1]"}`}>
+        <p
+          className={`font-medium text-[1.6rem] leading-[2.4rem] align-bottom ${
+            !props.isOpen && "opacity-[0.3]"
+          }`}
+        >
           {props.title}{" "}
         </p>
 
-        
         {/* <span className={`float-right transform ${props.isOpen ?  
                                  'rotate-180' : 'rotate-0'}  
                                  transition-transform duration-300`}> 
                     &#9660; 
                 </span>  */}
       </button>
-      {props.isOpen && <p className="p-4 bg-white text-[1.4rem] leading-[2rem] ">{props.data}</p>}
+      {props.isOpen && (
+        <p className="p-4 bg-white text-[1.4rem] leading-[2rem] ">
+          {props.data}
+        </p>
+      )}
     </div>
   );
 }

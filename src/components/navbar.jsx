@@ -4,6 +4,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import VentisLogo from "./3ventis";
 import { Link } from "react-scroll";
 import AnimatedButton from "./button";
+import Waitlist from "./waitlist";
 
 const navigation = [
   { name: "About us", href: "about-us" },
@@ -14,6 +15,7 @@ const navigation = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const scrollToSection = (id) => {
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
@@ -27,6 +29,7 @@ export default function Navbar() {
         aria-label="Global"
         className="flex items-center justify-between p-5 px-10"
       >
+       {isOpen && <Waitlist close={() => setIsOpen(false)} />}
         <div className="flex md+:flex-1">
           <button className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
@@ -34,7 +37,8 @@ export default function Navbar() {
           </button>
         </div>
         <div className="flex gap-4 md+:hidden">
-          <AnimatedButton text="Early Access" />
+          <AnimatedButton text="Early Access" click={() => setIsOpen(true)} />
+          
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
@@ -57,7 +61,7 @@ export default function Navbar() {
           ))}
         </div>
         <div className="hidden md+:flex md+:flex-1 md+:justify-end">
-          <AnimatedButton text="Early Access" />
+          <AnimatedButton text="Early Access" click={() => setIsOpen(true)} />
         </div>
       </nav>
       <Dialog

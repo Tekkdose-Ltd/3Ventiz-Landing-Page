@@ -16,29 +16,9 @@ import smline2 from "../assets/images/smline2.png";
 export default function About() {
   return (
     <div className="Container grid gap-16">
-      <div className="grid gap-8">
-        <p data-aos="fade-up" className="primary-color text-[1.4rem] text-left">
-          ABOUT US
-        </p>
-        <div className="text-left grid gap-4 ">
-          <p
-            data-aos="fade-up"
-            className="text-[2.8rem] strong font-medium leading-[34px] md+:max-w-[450px] w-full "
-          >
-            We are redefining the digital space of event planning
-          </p>
-          <p
-            data-aos="fade-up"
-            className="text-[1.4rem] leading-[20px] text-color w-full md+:max-w-[400px] "
-          >
-            At 3ventiz, we bridge the gap between hosts and vendors, making
-            event planning simple, transparent, and stress-free
-          </p>
-        </div>
-      </div>
       <div
         style={{ backgroundColor: "rgba(245, 245, 250, 1)" }}
-        className="p-12 px-4 sm:px-12 md+:px-20 rounded-[2rem]"
+        className="p-12 px-4 sm:px-12 md+:px-24 rounded-[2rem]"
       >
         <div className="text-center grid gap-4">
           <p
@@ -83,7 +63,7 @@ export default function About() {
             to ensure a successful event.
           </p>
         </div>
-        <div className="pt-20 grid md+:grid-cols-2 gap-8 md:gap-20">
+        <div className="pt-20 grid md+:grid-cols-2 gap-8 md:gap-20 md+:max-w-[92rem] w-full md+:px-[6.4rem] ">
           <AboutCard
             text=" Set up and sell tickets quickly with easy tools to customize
           pricing, availability, and ticket types."

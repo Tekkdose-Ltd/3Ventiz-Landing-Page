@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import useEmblaCarousel from 'embla-carousel-react'
-import Autoplayy from 'embla-carousel-autoplay'
-import AutoScroll from 'embla-carousel-auto-scroll'
+import React, { useCallback, useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplayy from "embla-carousel-autoplay";
+import AutoScroll from "embla-carousel-auto-scroll";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -23,46 +23,69 @@ const slides = [
 ];
 
 export default function Carousel({ slides }) {
+  const [scrollSnaps, setScrollSnaps] = useState([]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [snaps, setsnaps] = useState([]);
+  const snap = slides
 
-
- const slidesToShow = 3
+  const generateRepeatedArray = (arr, times) => {
+    return Array(times).fill(arr).flat();
+   }
+   
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
-      loop: true,
+      loop: false,
       dragFree: true,
       // slidesToScroll:3,
-      inViewThreshold:1
+      inViewThreshold: 1,
     },
     [
       // Autoplayy({ delay: 2000, jump: false }),
-      AutoScroll({ playOnInit: true,speed:1 })
-    ],
+      AutoScroll({ playOnInit: true, speed: 1 }),
+    ]
   );
-  
+
+  const repeated = generateRepeatedArray(slides, 10);
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+
+    if (emblaApi.selectedScrollSnap() === snap.length - 2 ) {
+      snap.push(...repeated)
+     }
+  }, [emblaApi]);
+
   useEffect(() => {
-    if (emblaApi) console.log(emblaApi.slidesInView())
-  }, [emblaApi])
+    if (!emblaApi) return;
+
+    // console.log(emblaApi.scrollSnapList());
+    setScrollSnaps(emblaApi.scrollSnapList());
+    onSelect();
+    emblaApi.on("select", onSelect);
+
+    
+  }, [emblaApi, selectedIndex, onSelect]);
+
+ 
+
+  //console.log(snap,snap.length);
+  // console.log(repeated);
   return (
     <>
-     
-        <div className="embla h-full" ref={emblaRef}>
-          <div className="embla__container h-full !w-[342px] md+:!w-[584px]">
-            {slides.map((slide, i) => (
-              <div className="embla__slide w-full ">
-                <img
-                  key={i}
-                  src={slide}
-                  alt=""
-                  className="w-full h-full flex-shrink-0"
-                />
-              </div>
-            ))}
-          </div>
+      <div className="embla h-full" ref={emblaRef}>
+        <div className="embla__container h-full !w-[342px] sm:!w-[720px] md+:!w-[680px]">
+          {snap.map((slide, i) => (
+            <div key={i} className="embla__slide w-full ">
+              <img src={slide} alt="" className="w-full h-full flex-shrink-0" />
+            </div>
+          ))}
         </div>
+      </div>
     </>
   );
 }
+
 // export default function Carousel({ slides }) {
 // const settings = {
 //   dots: false,

@@ -19,7 +19,7 @@ export default function HowItWorks() {
             Plan Your Event in Just a Few Steps
           </p>
         </div>
-        <div className="grid md+:grid-cols-2 gap-4 mt-8">
+        <div className="grid sm:grid-cols-2 md+:grid-cols-4 gap-8 mt-8">
           <StepsCard
             num={1}
             title={"Search & Filter"}
@@ -59,7 +59,7 @@ const StepsCard = ({ text, title, num }) => {
       style={{
         backgroundColor: "rgba(255, 255, 255, 0.1)",
       }}
-      className="p-8 rounded-[2rem]4"
+      className="p-12 rounded-[2rem]"
     >
       <p
         data-aos="fade-up"
@@ -67,7 +67,7 @@ const StepsCard = ({ text, title, num }) => {
       >
         {num}
       </p>
-      <div className=" grid gap-">
+      <div className=" grid gap-4 md+:mt-[-3rem]">
         <p
           data-aos="fade-up"
           className="text-[2rem] strong leading-[2.8rem] font-medium text-white"

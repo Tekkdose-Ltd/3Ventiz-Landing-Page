@@ -5,6 +5,7 @@ import musician from "../assets/images/musician.png";
 import photographers from "../assets/images/photographers.png";
 import decorators from "../assets/images/decorators.png";
 import makeup from "../assets/images/makeup.png";
+import dj from "../assets/images/disc joker.png";
 import concerts from "../assets/images/concerts.png";
 import birthday from "../assets/images/birthday.png";
 import events from "../assets/images/events.png";
@@ -12,7 +13,7 @@ import babyshower from "../assets/images/babyshower.png";
 import Carousel from "./carousel";
 import AnimatedButton from "./button";
 
-const vendorSlide = [caterers, photographers, decorators, musician, makeup];
+const vendorSlide = [caterers, makeup, decorators,photographers,dj, musician];
 const clientSlide = [wedding, concerts, babyshower, events, birthday];
 
 export default function UserSection() {
@@ -44,8 +45,8 @@ export default function UserSection() {
       <div className="grid gap-6">
         <div className="grid md+:grid-cols-[32rem_1fr] gap-8  md+:h-[400px]">
           <div
-            style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
-            className="rounded-[1.6rem] p-8 flex flex-col gap-24 justify-between items-start"
+           // style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
+            className="rounded-[1.6rem] p-8 flex flex-col gap-24 md+:gap-8 items-start"
           >
             <div className="grid gap-6">
               <p
@@ -71,14 +72,14 @@ export default function UserSection() {
               />
             </div>
           </div>
-          <div className="overflow-hidden rounded-[1.6rem] h-[23.4rem] md+:h-[40rem] w-full">
+          <div className="overflow-hidden rounded-[1.6rem] h-[40rem] w-full">
             <Carousel slides={vendorSlide} />
           </div>
         </div>
-        <div className="grid md+:grid-cols-[1fr_32rem] gap-8  md:h-[400px]">
+        <div className="grid md+:grid-cols-[1fr_32rem] gap-8  md+:h-[400px]">
           <div
-            style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
-            className="rounded-[1.6rem] md+:order-2 p-8 flex flex-col gap-24 justify-between items-start"
+           // style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
+            className="rounded-[1.6rem] md+:order-2 p-8 flex flex-col gap-24 md+:gap-8 items-start"
           >
             <div className="grid gap-6">
               <p
@@ -104,7 +105,7 @@ export default function UserSection() {
               />
             </div>
           </div>
-          <div className="overflow-hidden md+:order-1 h-[23.4rem] md+:h-[40rem] w-full rounded-[1.6rem]">
+          <div className="overflow-hidden md+:order-1 h-[40rem] w-full rounded-[1.6rem]">
             <Carousel slides={clientSlide} />
           </div>
         </div>

@@ -1,16 +1,17 @@
 import React, { useState, useRef } from "react";
 import arrow from "../assets/images/arrow.png";
 
-const AnimatedButton = ({ text, className }) => {
+const AnimatedButton = ({ text, className, click }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <a
-      href="https://docs.google.com/forms/d/e/1FAIpQLScFbhtzofQXprEY2_PQR5ImdAcd5nXa0AOifWMqyOfPJdwxwQ/viewform?usp=header"
-      target="_blank"
+    <button
+      // href="https://docs.google.com/forms/d/e/1FAIpQLScFbhtzofQXprEY2_PQR5ImdAcd5nXa0AOifWMqyOfPJdwxwQ/viewform?usp=header"
+      // target="_blank"
       className={`animate-btn p-5 rounded-full primary-bg flex items-center justify-center relative ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={click}
     >
       <span
         className={`
@@ -42,7 +43,7 @@ const AnimatedButton = ({ text, className }) => {
       >
         <img src={arrow} alt="" />
       </span>
-    </a>
+    </button>
   );
 };
 

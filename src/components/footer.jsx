@@ -41,8 +41,8 @@ export default function Footer() {
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
                 borderColor: "rgba(255, 255, 255, 0.1)",
               }}
-              data-aos="fade-up"
-              className="flex items-center gap-2 justify-between mt-4 max-w-[350px] w-full rounded-[1rem]  pl-4 border "
+              // data-aos="fade-up"
+              className="flex items-center gap-2 justify-between max-w-[350px] w-full rounded-full p-2 pl-[1.6rem] border "
             >
               <input
                 type="email"
@@ -51,7 +51,7 @@ export default function Footer() {
                 className="flex-1 text-[1.4rem] outline-none text-gray-400 bg-transparent"
                 placeholder="Enter email address"
               />
-              <button className="bg-white primary-color font-medium text-[1.2rem] sm:text-[1.4rem] px-4 sm:px-[1.8rem] py-2  rounded-[6px] ">
+              <button className="bg-white primary-color font-semibold text-[1.2rem] sm:text-[1.4rem] px-[1.6rem]  py-[1.2rem]  rounded-full ">
                 Join waitlist
               </button>
             </div>
@@ -175,7 +175,7 @@ export default function Footer() {
         <img
           src={footer}
           alt="footer logo"
-          className="ml-auto max-w-[584px] w-full"
+          className="ml-auto max-w-[292px] md+:max-w-[584px] w-full"
         />
         <div
           style={{ borderTopColor: `rgba(255, 255, 255, 0.1)` }}
@@ -184,7 +184,7 @@ export default function Footer() {
         >
           <p
             data-aos="fade-up"
-            className="text-[14px] text-white text-left mt-8"
+            className="text-[14px] text-white text-left mt-8 !opacity-[0.6]"
           >
             &copy; 2024 3ventiz. All rights reserved.
           </p>
