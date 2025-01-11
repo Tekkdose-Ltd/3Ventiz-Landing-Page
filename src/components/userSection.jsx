@@ -10,11 +10,24 @@ import concerts from "../assets/images/concerts.png";
 import birthday from "../assets/images/birthday.png";
 import events from "../assets/images/events.png";
 import babyshower from "../assets/images/babyshower.png";
+import caterersxs from "../assets/images/caterersxs.png";
+import weddingxs from "../assets/images/weddingxs.png";
+import musicianxs from "../assets/images/musicianxs.png";
+import photographersxs from "../assets/images/photographersxs.png";
+import decoratorsxs from "../assets/images/decoratorsxs.png";
+import makeupxs from "../assets/images/makeupxs.png";
+import djxs from "../assets/images/disc jokerxs.png";
+import concertsxs from "../assets/images/concertsxs.png";
+import birthdayxs from "../assets/images/birthdayxs.png";
+import eventsxs from "../assets/images/eventsxs.png";
+import babyshowerxs from "../assets/images/babyshowerxs.png";
 import Carousel from "./carousel";
 import AnimatedButton from "./button";
 
 const vendorSlide = [caterers, makeup, decorators,photographers,dj, musician];
 const clientSlide = [wedding, concerts, babyshower, events, birthday];
+const vendorSlidexs = [caterersxs, makeupxs, decoratorsxs,photographersxs,djxs, musicianxs];
+const clientSlidexs = [weddingxs, concertsxs, babyshowerxs, eventsxs, birthdayxs];
 
 export default function UserSection() {
   return (
@@ -72,8 +85,11 @@ export default function UserSection() {
               />
             </div>
           </div>
-          <div className="overflow-hidden rounded-[1.6rem] h-[40rem] w-full">
+          <div className="overflow-hidden hidden sm:block rounded-[1.6rem] h-[40rem] w-full">
             <Carousel slides={vendorSlide} />
+          </div>
+          <div className="overflow-hidden block sm:hidden rounded-[1.6rem] h-[40rem] w-full">
+            <Carousel slides={vendorSlidexs} />
           </div>
         </div>
         <div className="grid md+:grid-cols-[1fr_32rem] gap-8  md+:h-[400px]">
@@ -105,8 +121,11 @@ export default function UserSection() {
               />
             </div>
           </div>
-          <div className="overflow-hidden md+:order-1 h-[40rem] w-full rounded-[1.6rem]">
+          <div className="overflow-hidden hidden sm:block md+:order-1 h-[40rem] w-full rounded-[1.6rem]">
             <Carousel slides={clientSlide} />
+          </div>
+          <div className="overflow-hidden block sm:hidden md+:order-1 h-[40rem] w-full rounded-[1.6rem]">
+            <Carousel slides={clientSlidexs} />
           </div>
         </div>
       </div>

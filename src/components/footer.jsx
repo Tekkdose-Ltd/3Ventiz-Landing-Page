@@ -37,6 +37,7 @@ export default function Footer() {
             </p>
 
             <div
+             data-aos="fade-up"
               style={{
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
                 borderColor: "rgba(255, 255, 255, 0.1)",
@@ -173,6 +174,7 @@ export default function Footer() {
         </div>
 
         <img
+         data-aos="fade-up"
           src={footer}
           alt="footer logo"
           className="ml-auto max-w-[292px] md+:max-w-[584px] w-full"

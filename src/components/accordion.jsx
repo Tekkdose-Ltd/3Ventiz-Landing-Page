@@ -103,7 +103,7 @@ function AccordionComp(props) {
             height="20"
             viewBox="0 0 20 20"
             fill="none"
-            className="opacity-[0.3]"
+            className="opacity-[0.7]"
           >
             <path
               d="M3.125 10H16.875"
@@ -124,7 +124,7 @@ function AccordionComp(props) {
 
         <p
           className={`font-medium text-[1.6rem] leading-[2.4rem] align-bottom ${
-            !props.isOpen && "opacity-[0.3]"
+            !props.isOpen && "opacity-[0.7]"
           }`}
         >
           {props.title}{" "}

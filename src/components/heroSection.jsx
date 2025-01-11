@@ -10,7 +10,7 @@ export default function HeroSection() {
     >
       <div className="Container !pb-0 mb-8 pt-28">
         
-        <div className="absolute bottom-12 left-12 mx-auto md+:max-w-[600px] w-full">
+        <div className="absolute left-0 p-4 sm:p-0 bottom-12 sm:left-12 mx-auto md+:max-w-[600px] w-full">
           {/* <img data-aos="zoom-in-up" src={calender} alt="calender logo" className="absolute top-[4rem] left-[-6rem]  sm:left-[2rem]  z-[1000]" /> */}
           
           <div className="grid gap-8 ">
