@@ -30,13 +30,19 @@ export default function Waitlist({ close }) {
                 Please select:
               </p>
               <div className=" flex items-center gap-4">
-                <a style={{backgroundColor:"rgba(248, 248, 248, 1)"}} href="" className="flex items-center gap-4 p-[4px] pr-[12px] rounded-[12px]">
+                <a style={{backgroundColor:"rgba(248, 248, 248, 1)"}}
+                target="_blank" 
+                href="https://docs.google.com/forms/d/e/1FAIpQLScFbhtzofQXprEY2_PQR5ImdAcd5nXa0AOifWMqyOfPJdwxwQ/viewform?usp=dialog" 
+                className="flex items-center gap-4 p-[4px] pr-[12px] rounded-[12px]">
                   <img src={vendors} alt="Vendor icon" />
                   <span className="font-medium text-[1.4rem] leading-[18px] text-black">
                     Join as a Vendor
                   </span>
                 </a>
-                <a style={{backgroundColor:"rgba(248, 248, 248, 1)"}} href="" className="flex items-center gap-4 p-[4px] pr-[12px] rounded-[12px]">
+                <a style={{backgroundColor:"rgba(248, 248, 248, 1)"}}
+                target="_blank"
+                 href="https://docs.google.com/forms/d/e/1FAIpQLSeHdbLncolg-BWRYn6HcRssV8vX9ENxkQBMLZ0mofpix9VHTA/viewform?usp=header" 
+                 className="flex items-center gap-4 p-[4px] pr-[12px] rounded-[12px]">
                   <img src={client} alt="client icon" />
                   <span className="font-medium text-[1.4rem] leading-[18px] text-black">
                     Join as a Client

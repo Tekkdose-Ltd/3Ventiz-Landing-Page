@@ -43,16 +43,16 @@ export default function Footer() {
                 borderColor: "rgba(255, 255, 255, 0.1)",
               }}
               // data-aos="fade-up"
-              className="flex items-center gap-2 justify-between max-w-[350px] w-full rounded-full p-2 pl-[1.6rem] border "
+              className="grid grid-cols-2 xs:flex items-center gap-2 justify-between max-w-[350px] w-full rounded-full p-2 pl-[1.6rem] border "
             >
               <input
                 type="email"
                 name="email"
                 id=""
                 className="flex-1 text-[1.4rem] outline-none text-gray-400 bg-transparent"
-                placeholder="Enter email address"
+                placeholder="name@email.com"
               />
-              <button className="bg-white primary-color font-semibold text-[1.2rem] sm:text-[1.4rem] px-[1.6rem]  py-[1.2rem]  rounded-full ">
+              <button className="bg-white primary-color font-semibold text-[1.2rem] sm:text-[1.4rem] px-2  xs:px-[1.6rem]  py-[1.2rem]  rounded-full ">
                 Join waitlist
               </button>
             </div>

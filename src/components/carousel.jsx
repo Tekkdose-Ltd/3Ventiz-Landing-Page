@@ -26,59 +26,79 @@ export default function Carousel({ slides }) {
   const [scrollSnaps, setScrollSnaps] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [snaps, setsnaps] = useState([]);
-  const snap = slides
-
-  const generateRepeatedArray = (arr, times) => {
-    return Array(times).fill(arr).flat();
-   }
-   
+  const snap = slides;
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
-      loop: false,
+      loop: true,
       dragFree: true,
       // slidesToScroll:3,
       inViewThreshold: 1,
     },
     [
       // Autoplayy({ delay: 2000, jump: false }),
-      AutoScroll({ playOnInit: true, speed: 1 }),
+      //AutoScroll({ playOnInit: true, speed: 1 }),
     ]
   );
 
+  const scrollPrev = useCallback(
+    () => emblaApi && emblaApi.scrollPrev(),
+    [emblaApi]
+  );
+  const scrollNext = useCallback(
+    () => emblaApi && emblaApi.scrollNext(),
+    [emblaApi]
+  );
+  const scrollTo = useCallback(
+    (index) => emblaApi && emblaApi.scrollTo(index),
+    [emblaApi]
+  );
+
+  const generateRepeatedArray = (arr, times) => {
+    return Array(times).fill(arr).flat();
+  };
+
   const repeated = generateRepeatedArray(slides, 10);
+
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
 
-    if (emblaApi.selectedScrollSnap() === snap.length - 2 ) {
-      snap.push(...repeated)
-     }
+    // if (emblaApi.selectedScrollSnap() === snap.length - 2 ) {
+    //   snap.push(...repeated)
+    //  }
   }, [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return;
 
     // console.log(emblaApi.scrollSnapList());
-    setScrollSnaps(emblaApi.scrollSnapList());
     onSelect();
+    setScrollSnaps(emblaApi.scrollSnapList());
     emblaApi.on("select", onSelect);
-
-    
-  }, [emblaApi, selectedIndex, onSelect]);
-
- 
+  }, [emblaApi, selectedIndex, onSelect, setScrollSnaps]);
 
   //console.log(snap,snap.length);
   // console.log(repeated);
   return (
     <>
-      <div className="embla h-full" ref={emblaRef}>
-        <div className="embla__container h-full !w-[342px] sm:!w-[720px] md+:!w-[680px]">
-          {snap.map((slide, i) => (
+      <div className="embla h-full relative" ref={emblaRef}>
+        <div className="embla__container h-full !w-[342px] xs:!w-[720px] md+:!w-[680px]">
+          {slides.map((slide, i) => (
             <div key={i} className="embla__slide w-full ">
               <img src={slide} alt="" className="w-full h-full flex-shrink-0" />
             </div>
+          ))}
+        </div>
+        <div className="embla__dots">
+          {scrollSnaps.map((_, index) => (
+            <button
+              className={`embla__dot ${
+                index === selectedIndex ? "is-selected" : ""
+              }`}
+              type="button"
+              onClick={() => scrollTo(index)}
+            />
           ))}
         </div>
       </div>

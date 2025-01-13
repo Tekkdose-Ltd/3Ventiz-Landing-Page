@@ -55,11 +55,11 @@ export default function UserSection() {
           </p>
         </div>
       </div>
-      <div className="grid gap-6">
-        <div className="grid md+:grid-cols-[32rem_1fr] gap-8  md+:h-[400px]">
+      <div className="grid gap-8">
+        <div className="grid md+:grid-cols-[32rem_1fr] gap-10  md+:h-[400px]">
           <div
            // style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
-            className="rounded-[1.6rem] p-8 flex flex-col gap-24 md+:gap-8 items-start"
+            className="rounded-[1.6rem] flex flex-col gap-8 items-start"
           >
             <div className="grid gap-6">
               <p
@@ -82,20 +82,21 @@ export default function UserSection() {
               <AnimatedButton
                 text="Join as a Vendor"
                 className={"!w-[171px]"}
+                href={"https://docs.google.com/forms/d/e/1FAIpQLScFbhtzofQXprEY2_PQR5ImdAcd5nXa0AOifWMqyOfPJdwxwQ/viewform?usp=dialog"}
               />
             </div>
           </div>
-          <div className="overflow-hidden hidden sm:block rounded-[1.6rem] h-[40rem] w-full">
+          <div className="overflow-hidden hidden xs:block rounded-[1.6rem] h-[40rem] w-full">
             <Carousel slides={vendorSlide} />
           </div>
-          <div className="overflow-hidden block sm:hidden rounded-[1.6rem] h-[40rem] w-full">
+          <div className="overflow-hidden block xs:hidden rounded-[1.6rem] h-[40rem] w-full">
             <Carousel slides={vendorSlidexs} />
           </div>
         </div>
-        <div className="grid md+:grid-cols-[1fr_32rem] gap-8  md+:h-[400px]">
+        <div className="grid md+:grid-cols-[1fr_32rem] gap-10  md+:h-[400px]">
           <div
            // style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
-            className="rounded-[1.6rem] md+:order-2 p-8 flex flex-col gap-24 md+:gap-8 items-start"
+            className="rounded-[1.6rem] md+:order-2 flex flex-col gap-8 items-start"
           >
             <div className="grid gap-6">
               <p
@@ -118,13 +119,14 @@ export default function UserSection() {
               <AnimatedButton
                 text="Join as a Client"
                 className={"!w-[171px]"}
+                href={"https://docs.google.com/forms/d/e/1FAIpQLSeHdbLncolg-BWRYn6HcRssV8vX9ENxkQBMLZ0mofpix9VHTA/viewform?usp=header"}
               />
             </div>
           </div>
-          <div className="overflow-hidden hidden sm:block md+:order-1 h-[40rem] w-full rounded-[1.6rem]">
+          <div className="overflow-hidden hidden xs:block md+:order-1 h-[40rem] w-full rounded-[1.6rem]">
             <Carousel slides={clientSlide} />
           </div>
-          <div className="overflow-hidden block sm:hidden md+:order-1 h-[40rem] w-full rounded-[1.6rem]">
+          <div className="overflow-hidden block xs:hidden md+:order-1 h-[40rem] w-full rounded-[1.6rem]">
             <Carousel slides={clientSlidexs} />
           </div>
         </div>
