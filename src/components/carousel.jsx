@@ -83,10 +83,25 @@ export default function Carousel({ slides }) {
   return (
     <>
       <div className="embla h-full relative" ref={emblaRef}>
-        <div className="embla__container h-full !w-[342px] xs:!w-[720px] md+:!w-[680px]">
+        <div className="embla__container h-full !w-[342px] sm:!w-[720px] ">
           {slides.map((slide, i) => (
-            <div key={i} className="embla__slide w-full ">
-              <img src={slide} alt="" className="w-full h-full flex-shrink-0" />
+            <div key={i} className="embla__slide w-full relative">
+              <img src={slide.image} alt="" className="w-full h-full flex-shrink-0" />
+              <div 
+                className={`
+                  absolute bottom-8 left-0 right-0 
+                   p-4
+                  transform transition-all duration-1000 delay-500 ease-out
+                  ${selectedIndex === i
+                    ? 'translate-y-0 opacity-100' 
+                    : 'translate-y-full opacity-0'
+                  }
+                `}
+              >
+                <p className="text-white text-[2.8rem] leading-[3.2rem] strong font-medium">
+                  {slide.title}
+                </p>
+              </div>
             </div>
           ))}
         </div>

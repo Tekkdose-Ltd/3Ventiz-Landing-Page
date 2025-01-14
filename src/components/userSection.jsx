@@ -1,6 +1,6 @@
 import React from "react";
 import caterers from "../assets/images/caterers.png";
-import wedding from "../assets/images/wedding.png";
+import weddings from "../assets/images/weddings.png";
 import musician from "../assets/images/musician.png";
 import photographers from "../assets/images/photographers.png";
 import decorators from "../assets/images/decorators.png";
@@ -11,7 +11,7 @@ import birthday from "../assets/images/birthday.png";
 import events from "../assets/images/events.png";
 import babyshower from "../assets/images/babyshower.png";
 import caterersxs from "../assets/images/caterersxs.png";
-import weddingxs from "../assets/images/weddingxs.png";
+import weddingsxs from "../assets/images/weddingsxs.png";
 import musicianxs from "../assets/images/musicianxs.png";
 import photographersxs from "../assets/images/photographersxs.png";
 import decoratorsxs from "../assets/images/decoratorsxs.png";
@@ -24,10 +24,37 @@ import babyshowerxs from "../assets/images/babyshowerxs.png";
 import Carousel from "./carousel";
 import AnimatedButton from "./button";
 
-const vendorSlide = [caterers, makeup, decorators,photographers,dj, musician];
-const clientSlide = [wedding, concerts, babyshower, events, birthday];
-const vendorSlidexs = [caterersxs, makeupxs, decoratorsxs,photographersxs,djxs, musicianxs];
-const clientSlidexs = [weddingxs, concertsxs, babyshowerxs, eventsxs, birthdayxs];
+const vendorSlide = [
+  { image: caterers, title: "Caterers" },
+  { image: makeup, title: "Makeup Artists" },
+  { image: decorators, title: "Event Decorators" },
+  { image: photographers, title: "Photographers" },
+  { image: dj, title: "Disc Jockeys (DJ)" },
+  { image: musician, title: "Live Band" },
+];
+const vendorSlidexs = [
+  { image: caterersxs, title: "Caterers" },
+  { image: makeupxs, title: "Makeup Artists" },
+  { image: decoratorsxs, title: "Event Decorators" },
+  { image: photographersxs, title: "Photographers" },
+  { image: djxs, title: "Disc Jockeys (DJ)" },
+  { image: musicianxs, title: "Live Band" },
+];
+const clientSlide = [
+  { image: weddings, title: "Weddings" },
+  { image: events, title: "Corporate Events" },
+  { image: concerts, title: "Concerts" },
+  { image: birthday, title: "Birthdays" },
+  { image: babyshower, title: "Baby Showers" }
+];
+
+const clientSlidexs = [
+  { image: weddingsxs, title: "Weddings" },
+  { image: eventsxs, title: "Corporate Events" },
+  { image: concertsxs, title: "Concerts" },
+  { image: birthdayxs, title: "Birthdays" },
+  { image: babyshowerxs, title: "Baby Showers" }
+];
 
 export default function UserSection() {
   return (
@@ -58,7 +85,7 @@ export default function UserSection() {
       <div className="grid gap-8">
         <div className="grid md+:grid-cols-[32rem_1fr] gap-10  md+:h-[400px]">
           <div
-           // style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
+            // style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
             className="rounded-[1.6rem] flex flex-col gap-8 items-start"
           >
             <div className="grid gap-6">
@@ -82,7 +109,9 @@ export default function UserSection() {
               <AnimatedButton
                 text="Join as a Vendor"
                 className={"!w-[171px]"}
-                href={"https://docs.google.com/forms/d/e/1FAIpQLScFbhtzofQXprEY2_PQR5ImdAcd5nXa0AOifWMqyOfPJdwxwQ/viewform?usp=dialog"}
+                href={
+                  "https://docs.google.com/forms/d/e/1FAIpQLScFbhtzofQXprEY2_PQR5ImdAcd5nXa0AOifWMqyOfPJdwxwQ/viewform?usp=dialog"
+                }
               />
             </div>
           </div>
@@ -95,7 +124,7 @@ export default function UserSection() {
         </div>
         <div className="grid md+:grid-cols-[1fr_32rem] gap-10  md+:h-[400px]">
           <div
-           // style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
+            // style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
             className="rounded-[1.6rem] md+:order-2 flex flex-col gap-8 items-start"
           >
             <div className="grid gap-6">
@@ -119,7 +148,9 @@ export default function UserSection() {
               <AnimatedButton
                 text="Join as a Client"
                 className={"!w-[171px]"}
-                href={"https://docs.google.com/forms/d/e/1FAIpQLSeHdbLncolg-BWRYn6HcRssV8vX9ENxkQBMLZ0mofpix9VHTA/viewform?usp=header"}
+                href={
+                  "https://docs.google.com/forms/d/e/1FAIpQLSeHdbLncolg-BWRYn6HcRssV8vX9ENxkQBMLZ0mofpix9VHTA/viewform?usp=header"
+                }
               />
             </div>
           </div>
