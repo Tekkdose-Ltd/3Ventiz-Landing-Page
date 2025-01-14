@@ -83,7 +83,7 @@ export default function Carousel({ slides }) {
   return (
     <>
       <div className="embla h-full relative" ref={emblaRef}>
-        <div className="embla__container h-full !w-[342px] sm:!w-[720px] ">
+        <div className="embla__container h-full  ">
           {slides.map((slide, i) => (
             <div key={i} className="embla__slide w-full relative">
               <img src={slide.image} alt="" className="w-full h-full flex-shrink-0" />
