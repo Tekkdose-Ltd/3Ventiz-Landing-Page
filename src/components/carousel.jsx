@@ -31,9 +31,11 @@ export default function Carousel({ slides }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
-      dragFree: true,
       // slidesToScroll:3,
       inViewThreshold: 1,
+      skipSnaps: false,
+    dragFree: false,
+    containScroll: 'trimSnaps',
     },
     [
       // Autoplayy({ delay: 2000, jump: false }),
