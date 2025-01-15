@@ -18,7 +18,7 @@ export default function About() {
     <div className="Container grid gap-16">
       <div
         style={{ backgroundColor: "rgba(245, 245, 250, 1)" }}
-        className="p-12 px-4 sm:px-12 md+:px-24 rounded-[2rem]"
+        className="p-12 px-4 sm:px-12 xl:px-24 rounded-[2rem]"
       >
         <div className="text-center grid gap-4">
           <p
@@ -47,7 +47,7 @@ export default function About() {
             to ensure a successful event.
           </p>
         </div>
-        <div className="pt-20 grid md+:grid-cols-2 gap-8 md:gap-20 md+:max-w-[92rem] w-full md+:px-[6.4rem] ">
+        <div className="pt-20 grid md+:grid-cols-2 gap-8 md:gap-20 md+:max-w-[92rem] w-full xl:px-[6.4rem] ">
           <AboutCard
             text=" Set up and sell tickets quickly with easy tools to customize
           pricing, availability, and ticket types."
@@ -138,7 +138,7 @@ const AboutCard = ({ text, title, img }) => {
 
 const FeatureCard = ({ text, title, img }) => {
   return (
-    <div data-aos="fade-down" className="grid gap-4 text-left">
+    <div data-aos="fade-down" className="grid gap-4 items-start text-left">
       <img
         style={{ borderColor: "rgba(34, 31, 203, .1)" }}
         data-aos="fade-down"

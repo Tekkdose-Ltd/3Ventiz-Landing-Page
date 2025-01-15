@@ -45,7 +45,7 @@ const clientSlide = [
   { image: events, title: "Corporate Events" },
   { image: concerts, title: "Concerts" },
   { image: birthday, title: "Birthdays" },
-  { image: babyshower, title: "Baby Showers" }
+  { image: babyshower, title: "Baby Showers" },
 ];
 
 const clientSlidexs = [
@@ -53,7 +53,7 @@ const clientSlidexs = [
   { image: eventsxs, title: "Corporate Events" },
   { image: concertsxs, title: "Concerts" },
   { image: birthdayxs, title: "Birthdays" },
-  { image: babyshowerxs, title: "Baby Showers" }
+  { image: babyshowerxs, title: "Baby Showers" },
 ];
 
 export default function UserSection() {
@@ -82,13 +82,13 @@ export default function UserSection() {
           </p>
         </div>
       </div>
-      <div className="grid gap-8">
-        <div className="grid md+:grid-cols-[32rem_1fr] gap-10  md+:h-[400px]">
+      <div className="grid gap-16">
+        <div className="grid xl:grid-cols-[32rem_68rem] gap-16  xl:h-[400px]">
           <div
             // style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
             className="rounded-[1.6rem] flex flex-col gap-8 items-start"
           >
-            <div className="grid gap-6">
+            <div className="grid gap-4">
               <p
                 data-aos="fade-up"
                 className="italic text-[3.2rem] strong leading-[4rem] font-medium"
@@ -98,36 +98,36 @@ export default function UserSection() {
               <p
                 data-aos="fade-up"
                 style={{ color: "rgba(2, 1, 29, 1)" }}
-                className="text-[1.4rem] leading-[2rem] md+:max-w-[27rem] "
+                className="text-[1.4rem] leading-[2rem] font-light "
               >
                 Showcase your services, connect with more clients, and manage
                 bookings effortlessly. 3ventiz is your partner for business
                 growth.
               </p>
-            </div>
-            <div data-aos="fade-up">
-              <AnimatedButton
-                text="Join as a Vendor"
-                className={"!w-[171px]"}
-                href={
-                  "https://docs.google.com/forms/d/e/1FAIpQLScFbhtzofQXprEY2_PQR5ImdAcd5nXa0AOifWMqyOfPJdwxwQ/viewform?usp=dialog"
-                }
-              />
+              <div data-aos="fade-up">
+                <AnimatedButton
+                  text="Join as a Vendor"
+                  className={"!w-[171px]"}
+                  href={
+                    "https://docs.google.com/forms/d/e/1FAIpQLScFbhtzofQXprEY2_PQR5ImdAcd5nXa0AOifWMqyOfPJdwxwQ/viewform?usp=dialog"
+                  }
+                />
+              </div>
             </div>
           </div>
-          <div className="overflow-hidden hidden xs:block rounded-[1.6rem] h-[40rem] w-full">
+          <div className="overflow-hidden hidden xs:block rounded-[1.6rem] h-[40rem] md+:max-w-[73rem] w-full">
             <Carousel slides={vendorSlide} />
           </div>
           <div className="overflow-hidden block xs:hidden rounded-[1.6rem] h-[40rem] w-full">
             <Carousel slides={vendorSlidexs} />
           </div>
         </div>
-        <div className="grid md+:grid-cols-[1fr_32rem] gap-10  md+:h-[400px]">
+        <div className="grid xl:grid-cols-[68rem_32rem] gap-16  xl:h-[400px]">
           <div
             // style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
-            className="rounded-[1.6rem] md+:order-2 flex flex-col gap-8 items-start"
+            className="rounded-[1.6rem] xl:order-2 flex flex-col gap-8 items-start"
           >
-            <div className="grid gap-6">
+            <div className="grid gap-4">
               <p
                 data-aos="fade-up"
                 className="italic text-[3.2rem] strong leading-[4rem] font-medium"
@@ -137,27 +137,27 @@ export default function UserSection() {
               <p
                 data-aos="fade-up"
                 style={{ color: "rgba(2, 1, 29, 1)" }}
-                className="text-[1.4rem] leading-[2rem]  md+:max-w-[27rem] "
+                className="text-[1.4rem] leading-[2rem] font-light "
               >
                 Whether you’re planning a wedding, birthday, corporate event, or
                 baby shower, 3ventiz helps you find trusted vendors, stay within
                 budget, and plan with ease.
               </p>
-            </div>
-            <div data-aos="fade-up">
-              <AnimatedButton
-                text="Join as a Client"
-                className={"!w-[171px]"}
-                href={
-                  "https://docs.google.com/forms/d/e/1FAIpQLSeHdbLncolg-BWRYn6HcRssV8vX9ENxkQBMLZ0mofpix9VHTA/viewform?usp=header"
-                }
-              />
+              <div data-aos="fade-up">
+                <AnimatedButton
+                  text="Join as a Client"
+                  className={"!w-[171px]"}
+                  href={
+                    "https://docs.google.com/forms/d/e/1FAIpQLSeHdbLncolg-BWRYn6HcRssV8vX9ENxkQBMLZ0mofpix9VHTA/viewform?usp=header"
+                  }
+                />
+              </div>
             </div>
           </div>
-          <div className="overflow-hidden hidden xs:block md+:order-1 h-[40rem] w-full rounded-[1.6rem]">
+          <div className="overflow-hidden hidden xs:block xl:order-1 h-[40rem] md+:max-w-[73rem] w-full rounded-[1.6rem]">
             <Carousel slides={clientSlide} />
           </div>
-          <div className="overflow-hidden block xs:hidden md+:order-1 h-[40rem] w-full rounded-[1.6rem]">
+          <div className="overflow-hidden block xs:hidden xl:order-1 h-[40rem] w-full rounded-[1.6rem]">
             <Carousel slides={clientSlidexs} />
           </div>
         </div>
