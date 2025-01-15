@@ -89,7 +89,7 @@ export default function Carousel({ slides }) {
               <img src={slide.image} alt="" className="w-full h-full flex-shrink-0" />
               <div 
                 className={`
-                  absolute bottom-8 left-0 right-0 
+                  absolute bottom-8 left-8 right-0 
                    p-4
                   transform transition-all duration-1000 delay-500 ease-out
                   ${selectedIndex === i
