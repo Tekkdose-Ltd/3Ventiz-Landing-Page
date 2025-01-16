@@ -83,7 +83,7 @@ export default function UserSection() {
         </div>
       </div>
       <div className="grid gap-16">
-        <div className="grid xl:grid-cols-[32rem_68rem] gap-16  xl:h-[400px]">
+        <div className="grid xl:grid-cols-[1fr_68rem] gap-16  xl:h-[400px]">
           <div
             // style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
             className="rounded-[1.6rem] flex flex-col gap-8 items-start"
@@ -122,7 +122,7 @@ export default function UserSection() {
             <Carousel slides={vendorSlidexs} />
           </div>
         </div>
-        <div className="grid xl:grid-cols-[68rem_32rem] gap-16  xl:h-[400px]">
+        <div className="grid xl:grid-cols-[68rem_1fr] gap-16  xl:h-[400px]">
           <div
             // style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
             className="rounded-[1.6rem] xl:order-2 flex flex-col gap-8 items-start"

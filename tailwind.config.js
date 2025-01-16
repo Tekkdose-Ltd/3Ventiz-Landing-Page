@@ -23,6 +23,8 @@ export default {
       'xl': '1200px',
       // => @media (min-width: 1280px) { ... }
 
+      '1xl': '1300px',
+
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     }

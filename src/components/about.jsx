@@ -47,7 +47,7 @@ export default function About() {
             to ensure a successful event.
           </p>
         </div>
-        <div className="pt-20 grid md+:grid-cols-2 gap-8 md:gap-20 md+:max-w-[92rem] w-full xl:px-[6.4rem] ">
+        <div className="pt-20 grid md+:grid-cols-2 mx-auto gap-8 md:gap-20 md+:max-w-[92rem] w-full xl:px-[6.4rem] 1xl:px-0 ">
           <AboutCard
             text=" Set up and sell tickets quickly with easy tools to customize
           pricing, availability, and ticket types."
