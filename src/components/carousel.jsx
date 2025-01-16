@@ -30,15 +30,35 @@ export default function Carousel({ slides }) {
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
-      loop: true,
-      dragFree: true,
+      loop: false,
       // slidesToScroll:3,
       inViewThreshold: 1,
+      skipSnaps: false,
+      dragFree: false,
+      containScroll: "keepSnaps",
+      align: 'start',
+      speed: 10,
+      startIndex: 0,
+      // Prevent dragging beyond edges
+      watchDrag: (emblaApi) => {
+        const engine = emblaApi.internalEngine();
+        const location = engine.location;
+        const target = engine.target;
+        
+        // If at the start, prevent dragging left
+        if (location.get() === 0 && target.get() < 0) {
+          return false;
+        }
+        
+        // If at the end, prevent dragging right
+        const maxScroll = emblaApi.scrollSnapList().length - 1;
+        if (location.get() === maxScroll && target.get() > maxScroll) {
+          return false;
+        }
+        
+        return true;
+      }
     },
-    [
-      // Autoplayy({ delay: 2000, jump: false }),
-      //AutoScroll({ playOnInit: true, speed: 1 }),
-    ]
   );
 
   const scrollPrev = useCallback(
@@ -86,19 +106,24 @@ export default function Carousel({ slides }) {
         <div className="embla__container h-full  ">
           {slides.map((slide, i) => (
             <div key={i} className="embla__slide w-full relative">
-              <img src={slide.image} alt="" className="w-full h-full flex-shrink-0" />
-              <div 
+              <img
+                src={slide.image}
+                alt=""
+                className="w-full h-full flex-shrink-0"
+              />
+              <div
                 className={`
                   absolute bottom-8 left-8 right-0 
                    p-4
                   transform transition-all duration-1000 delay-500 ease-out
-                  ${selectedIndex === i
-                    ? 'translate-y-0 opacity-100' 
-                    : 'translate-y-full opacity-0'
+                  ${
+                    selectedIndex === i
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-full opacity-0"
                   }
                 `}
               >
-                <p className="text-white text-[2.8rem] leading-[3.2rem] strong font-medium">
+                <p className="text-white text-[2.8rem] leading-[3.2rem] strong ">
                   {slide.title}
                 </p>
               </div>
