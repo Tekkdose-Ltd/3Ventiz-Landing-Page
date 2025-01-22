@@ -1,17 +1,24 @@
 import React from "react";
 import caterers from "../assets/images/caterers.png";
+import caterersmd from "../assets/images/caterersmd.png";
 import weddings from "../assets/images/weddings.png";
 import musician from "../assets/images/musician.png";
+import musicianmd from "../assets/images/musicianmd.png";
 import photographers from "../assets/images/photographers.png";
+import photographersmd from "../assets/images/photographersmd.png";
 import decorators from "../assets/images/decorators.png";
+import decoratorsmd from "../assets/images/decoratorsmd.png";
 import makeup from "../assets/images/makeup.png";
+import makeupmd from "../assets/images/makeupmd.png";
 import dj from "../assets/images/disc joker.png";
+import djmd from "../assets/images/disc jokermd.png";
 import concerts from "../assets/images/concerts.png";
 import birthday from "../assets/images/birthday.png";
 import events from "../assets/images/events.png";
 import babyshower from "../assets/images/babyshower.png";
 import caterersxs from "../assets/images/caterersxs.png";
 import weddingsxs from "../assets/images/weddingsxs.png";
+import weddingsmd from "../assets/images/weddingsmd.png";
 import musicianxs from "../assets/images/musicianxs.png";
 import photographersxs from "../assets/images/photographersxs.png";
 import decoratorsxs from "../assets/images/decoratorsxs.png";
@@ -21,6 +28,10 @@ import concertsxs from "../assets/images/concertsxs.png";
 import birthdayxs from "../assets/images/birthdayxs.png";
 import eventsxs from "../assets/images/eventsxs.png";
 import babyshowerxs from "../assets/images/babyshowerxs.png";
+import concertsmd from "../assets/images/concertsmd.png";
+import birthdaymd from "../assets/images/birthdaymd.png";
+import eventsmd from "../assets/images/eventsmd.png";
+import babyshowermd from "../assets/images/babyshowermd.png";
 import Carousel from "./carousel";
 import AnimatedButton from "./button";
 
@@ -32,6 +43,15 @@ const vendorSlide = [
   { image: dj, title: "Disc Jockeys (DJ)" },
   { image: musician, title: "Live Band" },
 ];
+const vendorSlidemd = [
+  { image: caterersmd, title: "Caterers" },
+  { image: makeupmd, title: "Makeup Artists" },
+  { image: decoratorsmd, title: "Event Decorators" },
+  { image: photographersmd, title: "Photographers" },
+  { image: djmd, title: "Disc Jockeys (DJ)" },
+  { image: musicianmd, title: "Live Band" },
+];
+
 const vendorSlidexs = [
   { image: caterersxs, title: "Caterers" },
   { image: makeupxs, title: "Makeup Artists" },
@@ -54,6 +74,13 @@ const clientSlidexs = [
   { image: concertsxs, title: "Concerts" },
   { image: birthdayxs, title: "Birthdays" },
   { image: babyshowerxs, title: "Baby Showers" },
+];
+const clientSlidemd = [
+  { image: weddingsmd, title: "Weddings" },
+  { image: eventsmd, title: "Corporate Events" },
+  { image: concertsmd, title: "Concerts" },
+  { image: birthdaymd, title: "Birthdays" },
+  { image: babyshowermd, title: "Baby Showers" },
 ];
 
 export default function UserSection() {
@@ -115,8 +142,11 @@ export default function UserSection() {
               </div>
             </div>
           </div>
-          <div className="overflow-hidden hidden xs:block rounded-[1.6rem] h-[40rem] md+:max-w-[73rem] w-full">
+          <div className="overflow-hidden hidden xsm:block rounded-[1.6rem] h-[40rem] md+:max-w-[73rem] w-full">
             <Carousel slides={vendorSlide} />
+          </div>
+          <div className="overflow-hidden hidden xs:block xsm:hidden rounded-[1.6rem] h-[40rem] md+:max-w-[73rem] w-full">
+            <Carousel slides={vendorSlidemd} />
           </div>
           <div className="overflow-hidden block xs:hidden rounded-[1.6rem] h-[40rem] w-full">
             <Carousel slides={vendorSlidexs} />
@@ -154,10 +184,13 @@ export default function UserSection() {
               </div>
             </div>
           </div>
-          <div className="overflow-hidden hidden xs:block xl:order-1 h-[40rem] md+:max-w-[73rem] w-full rounded-[1.6rem]">
+          <div className="overflow-hidden hidden xsm:block rounded-[1.6rem] h-[40rem] md+:max-w-[73rem] w-full">
             <Carousel slides={clientSlide} />
           </div>
-          <div className="overflow-hidden block xs:hidden xl:order-1 h-[40rem] w-full rounded-[1.6rem]">
+          <div className="overflow-hidden hidden xs:block xsm:hidden rounded-[1.6rem] h-[40rem] md+:max-w-[73rem] w-full">
+            <Carousel slides={clientSlidemd} />
+          </div>
+          <div className="overflow-hidden block xs:hidden rounded-[1.6rem] h-[40rem] w-full">
             <Carousel slides={clientSlidexs} />
           </div>
         </div>
