@@ -1,17 +1,17 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import {
-  HeroSection,
-  Footer,
-  Navbar,
-  About,
-  HowItWorks,
-  UserSection,
-  Faqs,
-  AnimatedButton,
-} from "./components";
 import { useEffect } from "react";
+import {
+  About,
+  AnimatedButton,
+  Faqs,
+  Footer,
+  HeroSection,
+  HowItWorks,
+  Navbar,
+  UserSection,
+} from "./components";
 
 function App() {
   useEffect(() => {
@@ -24,6 +24,7 @@ function App() {
     <main>
       <Navbar />
       <HeroSection />
+    
       <section id="about-us">
         <About />
       </section>

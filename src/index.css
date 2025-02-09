@@ -105,7 +105,11 @@ background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+#mc_embed_signup{
+  background:#fff; 
+  clear:left; 
+  font:14px Helvetica,Arial,sans-serif; 
+  width: 600px;}
 .embla__dot {
   background-color: transparent;
   cursor: pointer;

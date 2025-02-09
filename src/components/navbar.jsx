@@ -19,7 +19,7 @@ export default function Navbar() {
   const scrollToSection = (id) => {
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
-    console.log(element);
+    //console.log(element);
     element.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -36,7 +36,7 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 left-0 right-0 z-50 bg-white">
       <nav
         aria-label="Global"
-        className="flex items-center justify-between p-5 px-10"
+        className="flex items-center justify-between p-[10px] px-[30px]"
       >
        {isOpen && <Waitlist close={() => modalFunction()} />}
         <div className="flex md+:flex-1">

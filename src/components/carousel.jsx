@@ -133,6 +133,7 @@ export default function Carousel({ slides }) {
         <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
             <button
+            key={index}
               className={`embla__dot ${
                 index === selectedIndex ? "is-selected" : ""
               }`}

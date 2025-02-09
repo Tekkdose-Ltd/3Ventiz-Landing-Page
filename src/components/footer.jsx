@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import VentisLogo from "./3ventis";
 import footer from "../assets/images/footer logo.png";
 import linkedin from "../assets/images/linkedin.png";
@@ -14,12 +14,49 @@ const navigation = [
 ];
 
 export default function Footer() {
+  const [email, setEmail] = useState('');
+  const [isActive, setIsActive] = useState(false);
+
+  const url = `https://zm8zfyfxi5.execute-api.eu-north-1.amazonaws.com/subscribe`;
+
+  const handleSubmit = async () => {
+    // e.preventDefault();
+    console.log(email);
+    
+    try {
+      setIsActive(true);
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+        }),
+      });
+
+      if (response.ok) {
+        setEmail("");
+        setIsActive(false);
+      }else{
+        setIsActive(false);
+        // alert("wrong email")
+        alert(response.statusText)
+      }
+
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+      setIsActive(false);
+    }
+  };
   const scrollToSection = (id) => {
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
     console.log(element);
     element.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <footer className="bg-white p-8">
       <div className="rounded-[2rem] primary-darkbg p-8">
@@ -51,9 +88,11 @@ export default function Footer() {
                 id=""
                 className="flex-1 text-[1.4rem] outline-none text-gray-400 bg-transparent"
                 placeholder="name@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
-              <button className="bg-white primary-color font-semibold text-[1.2rem] sm:text-[1.4rem] px-2  xs:px-[1.6rem]  py-[1.2rem]  rounded-full ">
-                Join waitlist
+              <button disabled={isActive} onClick={handleSubmit} className="bg-white primary-color font-semibold text-[1.2rem] sm:text-[1.4rem] px-2  xs:px-[1.6rem]  py-[1.2rem]  rounded-full ">
+              {!isActive?"Join waitlist":"sending..."}
               </button>
             </div>
 
