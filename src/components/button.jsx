@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import arrow from "../assets/images/arrow.png";
 
-const AnimatedButton = ({ text, className, click, href }) => {
+const AnimatedButton = ({ text, className, click, href, icns = "translate-x-24" }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   if(href){
@@ -37,7 +37,7 @@ const AnimatedButton = ({ text, className, click, href }) => {
           transition-all
           duration-300
           ${
-            isHovered ? "opacity-100 translate-x-24" : "opacity-0 translate-x-0"
+            isHovered ? `opacity-100 ${icns}` : "opacity-0 translate-x-0"
           }
         `}
       >
@@ -80,7 +80,7 @@ const AnimatedButton = ({ text, className, click, href }) => {
           transition-all
           duration-300
           ${
-            isHovered ? "opacity-100 translate-x-24" : "opacity-0 translate-x-0"
+            isHovered ? `opacity-100 ${icns}` : "opacity-0 translate-x-0"
           }
         `}
       >

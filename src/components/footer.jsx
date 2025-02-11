@@ -5,6 +5,7 @@ import linkedin from "../assets/images/linkedin.png";
 import x from "../assets/images/x.png";
 import facebook from "../assets/images/facebook.png";
 import instagram from "../assets/images/instagram.png";
+import Success from "./success";
 
 const navigation = [
   { name: "About us", href: "about-us" },
@@ -16,13 +17,24 @@ const navigation = [
 export default function Footer() {
   const [email, setEmail] = useState('');
   const [isActive, setIsActive] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const modalFunction = () => {
+    setIsOpen(!isOpen);
+    if (document.body.style.overflow !== "hidden") {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  };
 
   const url = `https://zm8zfyfxi5.execute-api.eu-north-1.amazonaws.com/subscribe`;
 
   const handleSubmit = async () => {
+    if (!email) return;
     // e.preventDefault();
-    console.log(email);
-    
+    // console.log(email);
+
     try {
       setIsActive(true);
       const response = await fetch(url, {
@@ -38,13 +50,20 @@ export default function Footer() {
       if (response.ok) {
         setEmail("");
         setIsActive(false);
-      }else{
+        setIsOpen(true);
+      } else {
+        const errors = await response.json();
         setIsActive(false);
-        // alert("wrong email")
-        alert(response.statusText)
+        // console.log("wrong email")
+        if (errors[0]) {
+          alert(errors[0].message);
+        } else {
+          alert(errors.error);
+        }
       }
 
-      console.log(response);
+      // console.log(response);
+      // console.log(await response.json());
     } catch (error) {
       console.log(error);
       setIsActive(false);
@@ -59,6 +78,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-white p-8">
+      {isOpen && <Success close={() => modalFunction()} />}
       <div className="rounded-[2rem] primary-darkbg p-8">
         <div className="grid md+:grid-cols-[350px_1fr] gap-8 md:gap-32">
           <div className="text-left grid gap-8">

@@ -137,9 +137,12 @@ function AccordionComp(props) {
                 </span>  */}
       </button>
       {props.isOpen && (
-        <p className="p-4 bg-white text-[1.4rem] leading-[2rem] ">
-          {props.data}
-        </p>
+        <span className="p-4 bg-white flex items-center gap-8">
+           <img src={minus} alt="" className="opacity-0" />
+          <p className=" text-[1.4rem] leading-[2rem] ">
+            {props.data}
+          </p>
+        </span>
       )}
     </div>
   );

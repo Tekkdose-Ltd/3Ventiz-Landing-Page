@@ -2,10 +2,22 @@ import hero from "../assets/images/heroBg.png";
 import heroxs from "../assets/images/heroBgxs.png";
 import heromd from "../assets/images/heroBgmd.png";
 import { useState } from "react";
+import Success from "./success";
 
 export default function HeroSection({ click }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const modalFunction = () => {
+    setIsOpen(!isOpen);
+    if (document.body.style.overflow !== "hidden") {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  };
   return (
     <section className="p-8 mt-[75px]">
+      {isOpen && <Success close={() => modalFunction()} />}
       <div
         style={{ backgroundImage: `url(${hero})`, backgroundSize: "100% 100%" }}
         className="relative bg-no-repeat h-[620px] hidden md:block  sm:h-[713px] w-full rounded-[16px]"
@@ -30,7 +42,7 @@ export default function HeroSection({ click }) {
                 experience.
               </p>
             </div>
-            <InputContainer />
+            <InputContainer open={() => setIsOpen(true)} />
           </div>
         </div>
       </div>
@@ -61,7 +73,7 @@ export default function HeroSection({ click }) {
                 experience.
               </p>
             </div>
-            <InputContainer />
+            <InputContainer open={() => setIsOpen(true)} />
           </div>
         </div>
       </div>
@@ -93,7 +105,7 @@ export default function HeroSection({ click }) {
               </p>
             </div>
 
-            <InputContainer />
+            <InputContainer open={() => setIsOpen(true)} />
           </div>
         </div>
       </div>
@@ -101,15 +113,16 @@ export default function HeroSection({ click }) {
   );
 }
 
-const InputContainer = () => {
+const InputContainer = ({ open }) => {
   const [email, setEmail] = useState("");
   const [isActive, setIsActive] = useState(false);
 
   const url = `https://zm8zfyfxi5.execute-api.eu-north-1.amazonaws.com/subscribe`;
 
   const handleSubmit = async () => {
+    if (!email) return;
     // e.preventDefault();
-    console.log(email);
+    // console.log(email);
 
     try {
       setIsActive(true);
@@ -126,13 +139,20 @@ const InputContainer = () => {
       if (response.ok) {
         setEmail("");
         setIsActive(false);
-      }else{
+        open();
+      } else {
+        const errors = await response.json();
         setIsActive(false);
         // console.log("wrong email")
-        alert(response.statusText)
+        if (errors[0]) {
+          alert(errors[0].message);
+        } else {
+          alert(errors.error);
+        }
       }
 
-      console.log(response);
+      // console.log(response);
+      // console.log(await response.json());
     } catch (error) {
       console.log(error);
       setIsActive(false);
@@ -161,7 +181,7 @@ const InputContainer = () => {
         onClick={handleSubmit}
         className="bg-white primary-color font-semibold text-[1.2rem] sm:text-[1.4rem] px-2  xs:px-[1.6rem]  py-[1.2rem]  rounded-full "
       >
-         {!isActive?"Join waitlist":"sending..."}
+        {!isActive ? "Join waitlist" : "sending..."}
       </button>
     </div>
   );

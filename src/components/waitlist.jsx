@@ -51,6 +51,7 @@ export default function Waitlist({ close }) {
                 {Links.map((link) => {
                   return (
                     <button
+                    key={link.title}
                       onClick={() => setLinkHref(link.href)}
                       style={{
                         backgroundColor: `${

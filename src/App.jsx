@@ -60,7 +60,7 @@ function App() {
             data-aos="fade-up"
             className="flex items-center justify-center w-full"
           >
-            <AnimatedButton text="Join Waitlist" />
+            <AnimatedButton text="Join Waitlist" icns="translate-x-[5.4rem]" />
           </div>
         </div>
       </section>
