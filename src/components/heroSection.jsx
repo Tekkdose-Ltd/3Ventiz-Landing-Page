@@ -42,7 +42,7 @@ export default function HeroSection({ click }) {
                 experience.
               </p>
             </div>
-            <InputContainer open={() => setIsOpen(true)} />
+            <InputContainer open={() => modalFunction()} />
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@ export default function HeroSection({ click }) {
                 experience.
               </p>
             </div>
-            <InputContainer open={() => setIsOpen(true)} />
+            <InputContainer open={() => modalFunction()} />
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@ export default function HeroSection({ click }) {
               </p>
             </div>
 
-            <InputContainer open={() => setIsOpen(true)} />
+            <InputContainer open={() => modalFunction()} />
           </div>
         </div>
       </div>

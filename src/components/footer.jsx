@@ -50,7 +50,7 @@ export default function Footer() {
       if (response.ok) {
         setEmail("");
         setIsActive(false);
-        setIsOpen(true);
+         modalFunction()
       } else {
         const errors = await response.json();
         setIsActive(false);
