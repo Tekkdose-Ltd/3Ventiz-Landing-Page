@@ -28,7 +28,7 @@ export default function Footer() {
     }
   };
 
-  const url = `https://zm8zfyfxi5.execute-api.eu-north-1.amazonaws.com/subscribe`;
+  const url = `https://9sxeaygjo0.execute-api.eu-north-1.amazonaws.com/subscribe`;
 
   const handleSubmit = async () => {
     if (!email) return;
@@ -47,6 +47,8 @@ export default function Footer() {
         }),
       });
 
+      console.log(response)
+
       if (response.ok) {
         setEmail("");
         setIsActive(false);
@@ -54,11 +56,11 @@ export default function Footer() {
       } else {
         const errors = await response.json();
         setIsActive(false);
-        // console.log("wrong email")
+        console.log(errors)
         if (errors[0]) {
           alert(errors[0].message);
         } else {
-          alert(errors.error);
+          alert(errors.message);
         }
       }
 

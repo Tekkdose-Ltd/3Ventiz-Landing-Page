@@ -117,12 +117,12 @@ const InputContainer = ({ open }) => {
   const [email, setEmail] = useState("");
   const [isActive, setIsActive] = useState(false);
 
-  const url = `https://zm8zfyfxi5.execute-api.eu-north-1.amazonaws.com/subscribe`;
+  const url = `https://9sxeaygjo0.execute-api.eu-north-1.amazonaws.com/subscribe`;
 
   const handleSubmit = async () => {
     if (!email) return;
     // e.preventDefault();
-    // console.log(email);
+    console.log(email);
 
     try {
       setIsActive(true);
@@ -147,7 +147,7 @@ const InputContainer = ({ open }) => {
         if (errors[0]) {
           alert(errors[0].message);
         } else {
-          alert(errors.error);
+          alert(errors.message);
         }
       }
 
