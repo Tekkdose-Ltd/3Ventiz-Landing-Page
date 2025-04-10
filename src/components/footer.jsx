@@ -82,13 +82,13 @@ export default function Footer() {
     <footer className="bg-white p-8">
       {isOpen && <Success close={() => modalFunction()} />}
       <div className="rounded-[2rem] primary-darkbg p-8">
-        <div className="grid md+:grid-cols-[350px_1fr] gap-8 md:gap-32">
+        <div className="grid md+:grid-cols-[35rem_1fr] gap-8 md:gap-32">
           <div className="text-left grid gap-8">
             <VentisLogo clr="white" />
 
             <p
               data-aos="fade-up"
-              className="text-[1.4rem] leading-[20px] max-w-[290px] w-full text-white "
+              className="text-[1.4rem] leading-[2rem] max-w-[29rem] w-full text-white "
             >
               3ventiz transforms the way we connect, collaborate, and create
               unforgettable experiences, simplifying every step of event
@@ -102,7 +102,7 @@ export default function Footer() {
                 borderColor: "rgba(255, 255, 255, 0.1)",
               }}
               // data-aos="fade-up"
-              className="grid grid-cols-2 xs:flex items-center gap-2 justify-between max-w-[350px] w-full rounded-full p-2 pl-[1.6rem] border "
+              className="grid grid-cols-2 xs:flex items-center gap-2 justify-between max-w-[35rem] w-full rounded-full p-2 pl-[1.6rem] border "
             >
               <input
                 type="email"
@@ -121,13 +121,13 @@ export default function Footer() {
             <ul data-aos="fade-up" className="mt-8 flex items-center gap-10">
               <li>
                 <a href="https://www.linkedin.com/company/106094219/admin/dashboard/" rel="noreferrer" target="_blank" className="">
-                  <img src={linkedin} alt="footer logo" className="" />
+                  <img src={linkedin} alt="footer logo" className="size-10" />
                 </a>
               </li>
               <li>
                 <a href="https://web.facebook.com/" rel="noreferrer" target="_blank" className="">
                   <span className="sr-only">Facebook</span>
-                  <img src={facebook} alt="footer logo" className="" />
+                  <img src={facebook} alt="footer logo" className="size-10" />
                 </a>
               </li>
 
@@ -137,13 +137,13 @@ export default function Footer() {
                 <a href="#" rel="noreferrer" target="_blank" className="">
                   <span className="sr-only">Twitter</span>
 
-                  <img src={x} alt="footer logo" className="" />
+                  <img src={x} alt="footer logo" className="size-10" />
                 </a>
               </li>
               <li>
                 <a href="#" rel="noreferrer" target="_blank" className="">
                   <span className="sr-only">Instagram</span>
-                  <img src={instagram} alt="footer logo" className="" />
+                  <img src={instagram} alt="footer logo" className="size-10" />
                 </a>
               </li>
           
@@ -154,7 +154,7 @@ export default function Footer() {
             <div>
               <p
                 data-aos="fade-up"
-                className="font-medium text-[1.6rem] leading-[28px] !opacity-[0.6] text-white"
+                className="font-medium text-[1.6rem] leading-[2.8rem] !opacity-[0.6] text-white"
               >
                 COMPANY
               </p>
@@ -216,7 +216,7 @@ export default function Footer() {
             <div>
               <p
                 data-aos="fade-up"
-                className="font-medium text-[1.6rem] leading-[28px] !opacity-[0.6] text-white"
+                className="font-medium text-[1.6rem] leading-[2.8rem] !opacity-[0.6] text-white"
               >
                 LEGAL
               </p>
@@ -238,7 +238,7 @@ export default function Footer() {
          data-aos="fade-up"
           src={footer}
           alt="footer logo"
-          className="ml-auto max-w-[292px] md+:max-w-[584px] w-full"
+          className="ml-auto max-w-[29.2rem] md+:max-w-[58.4rem] w-full"
         />
         <div
           style={{ borderTopColor: `rgba(255, 255, 255, 0.1)` }}
@@ -261,7 +261,7 @@ const FooterText = ({ text }) => {
   return (
     <p
       data-aos="fade-up"
-      className="font-medium text-[1.6rem] leading-[28px]  text-white"
+      className="font-medium text-[1.6rem] leading-[2.8rem]  text-white"
     >
       {text}
     </p>

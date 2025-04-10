@@ -8,6 +8,19 @@ body{
 }
 html{
   font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+@media only screen and (min-width: 1500px) {
+  html{
+    font-size: 100%;
+    scroll-behavior: smooth;
+  }
+}
+@media only screen and (min-width: 2500px) {
+  html{
+    font-size: 120%;
+    scroll-behavior: smooth;
+  }
 }
 #root{
   padding: 0 !important;
@@ -54,7 +67,7 @@ background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-  width: 157px; /* Or your desired fixed width */
+  width: 15.7rem; /* Or your desired fixed width */
 }
 
 
@@ -117,8 +130,8 @@ background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0
   padding: 0;
   outline: 0;
   border: 0;
-  width: 12px;
-  height: 12px;
+  width: 1.2rem;
+  height: 1.2rem;
   margin-right: 7.5px;
   margin-left: 7.5px;
   display: flex;

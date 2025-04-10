@@ -10,10 +10,10 @@ export default function Faqs() {
           FREQUENTLY ASKED QUESTIONS
         </p>
         <div data-aos="fade-up" className="text-left grid gap-4 ">
-          <p data-aos="fade-up" className="text-[2.8rem] strong font-medium leading-[3.4rem] max-w-[450px] w-full ">
+          <p data-aos="fade-up" className="text-[2.8rem] strong font-medium leading-[3.4rem] max-w-[45rem] w-full ">
             Got Questions? We’ve Got Answers.
           </p>
-          <p data-aos="fade-up" className="text-[1.4rem] leading-[2rem] text-color md+:max-w-[400px] ">
+          <p data-aos="fade-up" className="text-[1.4rem] leading-[2rem] xl:text-[2rem] xl:leading-[3rem] text-color md+:max-w-[40rem] ">
             Find quick solutions and clear explanations for everything you need
             to know about 3ventiz
           </p>

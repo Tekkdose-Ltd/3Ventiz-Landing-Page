@@ -96,13 +96,13 @@ export default function UserSection() {
         <div className="text-left grid gap-4 ">
           <p
             data-aos="fade-up"
-            className="text-[2.8rem] strong font-medium leading-[3.4rem] max-w-[450px] w-full "
+            className="text-[2.8rem] strong font-medium leading-[3.4rem] max-w-[45rem] w-full "
           >
             Who is 3ventiz For?
           </p>
           <p
             data-aos="fade-up"
-            className="text-[1.4rem] leading-[2rem] text-color md+:max-w-[400px] "
+            className="text-[1.4rem] leading-[2rem] xl:text-[2rem] xl:leading-[3rem] text-color md+:max-w-[40rem] "
           >
             3ventiz connects event planners with trusted vendors, making
             planning seamless and business growth effortless
@@ -110,7 +110,7 @@ export default function UserSection() {
         </div>
       </div>
       <div className="grid gap-16">
-        <div className="grid xl:grid-cols-[1fr_68rem] gap-16  xl:h-[400px]">
+        <div className="grid xl:grid-cols-[1fr_68rem] gap-16  xl:h-[40rem]">
           <div
             // style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
             className="rounded-[1.6rem] flex flex-col gap-8 items-start"
@@ -125,7 +125,7 @@ export default function UserSection() {
               <p
                 data-aos="fade-up"
                 style={{ color: "rgba(2, 1, 29, 1)" }}
-                className="text-[1.4rem] leading-[2rem] font-light "
+                className="text-[1.4rem] leading-[2rem] xl:text-[2rem] xl:leading-[3rem] font-light "
               >
                 Showcase your services, connect with more clients, and manage
                 bookings effortlessly. 3ventiz is your partner for business
@@ -134,7 +134,7 @@ export default function UserSection() {
               <div data-aos="fade-up">
                 <AnimatedButton
                   text="Join as a Vendor"
-                  className={"!w-[171px]"}
+                  className={"!w-[17.1rem]"}
                   href={
                     "https://docs.google.com/forms/d/e/1FAIpQLScFbhtzofQXprEY2_PQR5ImdAcd5nXa0AOifWMqyOfPJdwxwQ/viewform?usp=dialog"
                   }
@@ -152,7 +152,7 @@ export default function UserSection() {
             <Carousel slides={vendorSlidexs} />
           </div>
         </div>
-        <div className="grid xl:grid-cols-[68rem_1fr] gap-16  xl:h-[400px]">
+        <div className="grid xl:grid-cols-[68rem_1fr] gap-16  xl:h-[40rem]">
           <div
             // style={{ backgroundColor: "rgba(239, 247, 246, 1)" }}
             className="rounded-[1.6rem] xl:order-2 flex flex-col gap-8 items-start"
@@ -167,7 +167,7 @@ export default function UserSection() {
               <p
                 data-aos="fade-up"
                 style={{ color: "rgba(2, 1, 29, 1)" }}
-                className="text-[1.4rem] leading-[2rem] font-light "
+                className="text-[1.4rem] leading-[2rem] xl:text-[2rem] xl:leading-[3rem] font-light "
               >
                 Whether you’re planning a wedding, birthday, corporate event, or
                 baby shower, 3ventiz helps you find trusted vendors, stay within
@@ -176,7 +176,7 @@ export default function UserSection() {
               <div data-aos="fade-up">
                 <AnimatedButton
                   text="Join as a Client"
-                  className={"!w-[171px]"}
+                  className={"!w-[17.1rem]"}
                   href={
                     "https://docs.google.com/forms/d/e/1FAIpQLSeHdbLncolg-BWRYn6HcRssV8vX9ENxkQBMLZ0mofpix9VHTA/viewform?usp=header"
                   }

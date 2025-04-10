@@ -20,13 +20,13 @@ export default function About() {
         <div className="text-center grid gap-4">
           <p
             data-aos="fade-up"
-            className="text-[1.4rem] leading-[18px] primary-color "
+            className="text-[1.4rem] leading-[1.8rem] primary-color "
           >
             WHAT MAKES US DIFFERENT?
           </p>
           <p
             data-aos="fade-up"
-            className="text-[2.8rem] strong font-medium leading-[34px] w-full "
+            className="text-[2.8rem] strong font-medium leading-[3.4rem] w-full "
           >
             Streamlining{" "}
             <span className="relative bg-gradient-to-r from-[#171591] via-[#3B81AF]  to-[#3B81AF] bg-clip-text text-transparent">
@@ -37,7 +37,7 @@ export default function About() {
           </p>
           <p
             data-aos="fade-up"
-            className="text-[1.4rem] leading-[20px] mx-auto text-color md+:max-w-[400px] w-full "
+            className="text-[1.4rem] leading-[2rem] mx-auto text-color md+:max-w-[40rem] w-full "
           >
             Create, sell, and manage event tickets effortlessly with our
             all-in-one platform. Track real-time sales and attendee information
@@ -111,19 +111,19 @@ const AboutCard = ({ text, title, img }) => {
         data-aos="fade-up"
         src={img}
         alt="about card logo"
-        className="w-[80px]"
+        className="w-[8rem]"
       />
       <div className="text-left grid gap-4">
         <p
           data-aos="fade-up"
-          className="font-medium strong text-[2rem] leading-[28px] text-color"
+          className="font-medium strong text-[2rem] leading-[2.8rem] text-color"
         >
           {title}
         </p>
 
         <p
           data-aos="fade-up"
-          className="text-[1.4rem] leading-[20px] "
+          className="text-[1.4rem] leading-[2rem] "
           style={{ color: "rgba(125, 125, 122, 1)" }}
         >
           {text}
@@ -141,17 +141,17 @@ const FeatureCard = ({ text, title, img }) => {
         data-aos="fade-down"
         src={img}
         alt="about card logo"
-        className="w-[4.5rem] h-[4.5rem] border-b-[3px]  rounded-[8px]"
+        className="w-[4.5rem] h-[4.5rem] border-b-[.3rem]  rounded-[.8rem]"
       />
       <p
         data-aos="fade-down"
-        className="font-medium strong text-[2rem] leading-[28px] text-color"
+        className="font-medium strong text-[2rem] leading-[2.8rem] text-color"
       >
         {title}
       </p>
       <p
         data-aos="fade-down"
-        className="text-[1.4rem] leading-[20px] "
+        className="text-[1.4rem] leading-[2rem] "
         style={{ color: "rgba(125, 125, 122, 1)" }}
       >
         {text}

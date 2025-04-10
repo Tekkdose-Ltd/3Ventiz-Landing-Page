@@ -123,7 +123,7 @@ function AccordionComp(props) {
         )}
 
         <p
-          className={`font-medium text-[1.6rem] leading-[2.4rem] align-bottom ${
+          className={`font-medium text-[1.6rem] leading-[2.4rem] 3xl:text-[2.6rem] 3xl:leading-[3.4rem] align-bottom ${
             !props.isOpen && "opacity-[0.7]"
           }`}
         >
@@ -139,7 +139,7 @@ function AccordionComp(props) {
       {props.isOpen && (
         <span className="p-4 bg-white flex items-center gap-8">
            <img src={minus} alt="" className="opacity-0" />
-          <p className=" text-[1.4rem] leading-[2rem] ">
+          <p className=" text-[1.4rem] leading-[2rem] 3xl:text-[2rem] 3xl:leading-[3rem] ">
             {props.data}
           </p>
         </span>

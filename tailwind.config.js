@@ -8,6 +8,7 @@ export default {
   ],
   theme: {
     screens: {
+      'xxs': '360px',
       'xs': '400px',
       "xsm":"520px",
       'sm': '640px',
@@ -26,7 +27,9 @@ export default {
 
       '1xl': '1300px',
 
-      '2xl': '1536px',
+      '2xl': '1500px',
+      // => @media (min-width: 1536px) { ... }
+      '3xl': '2500px',
       // => @media (min-width: 1536px) { ... }
     }
   },

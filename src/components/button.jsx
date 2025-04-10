@@ -15,7 +15,7 @@ const AnimatedButton = ({ text, className, click, href, icns = "translate-x-24" 
     >
       <span
         className={`
-          text-[1.4rem] 
+          text-[1.4rem]
           font-medium 
           text-white
           transition-transform 

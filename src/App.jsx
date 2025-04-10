@@ -38,10 +38,10 @@ function App() {
         <Faqs />
       </section>
       <section className="Container py-24">
-        <div className="md+:max-w-[600px] w-full mx-auto flex flex-col justify-start items-start gap-4 text-center">
+        <div className="md+:max-w-[60rem] w-full mx-auto flex flex-col justify-start items-start gap-4 text-center">
           <p
             data-aos="fade-up"
-            className="text-[3rem] strong sm:text-[4rem] md+:text-[6.4rem] leading-[48px] md+:leading-[72px] font-medium "
+            className="text-[3rem] strong sm:text-[4rem] md+:text-[6.4rem] leading-[4.8rem] md+:leading-[7.2rem] font-medium "
           >
             Your Dream Event is Just a{" "}
             <span className="relative bg-gradient-to-r from-[#171591] via-[#3B81AF]  to-[#3B81AF] bg-clip-text text-transparent">
@@ -50,7 +50,7 @@ function App() {
           </p>
           <p
             data-aos="fade-up"
-            className="text-[1.4rem] leading-[20px] text-color md+:max-w-[528px] w-full mx-auto"
+            className="text-[1.4rem] leading-[2rem] text-color md+:max-w-[52.8rem] w-full mx-auto"
           >
             Join thousands of happy users who’ve discovered the easiest way to
             plan their events. Whether you’re hosting or providing services,

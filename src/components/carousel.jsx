@@ -1,15 +1,10 @@
-import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import Autoplayy from "embla-carousel-autoplay";
-import AutoScroll from "embla-carousel-auto-scroll";
+import React, { useCallback, useEffect, useState } from "react";
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";

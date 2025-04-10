@@ -23,22 +23,22 @@ export default function Navbar() {
     element.scrollIntoView({ behavior: "smooth" });
   };
 
-  const modalFunction =()=>{
-    setIsOpen(!isOpen)
+  const modalFunction = () => {
+    setIsOpen(!isOpen);
     if (document.body.style.overflow !== "hidden") {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "scroll";
     }
-  }
+  };
 
   return (
     <header className="fixed inset-x-0 top-0 left-0 right-0 z-50 bg-white">
       <nav
         aria-label="Global"
-        className="flex items-center justify-between p-[10px] px-[30px]"
+        className="flex items-center justify-between p-[1rem] px-[3rem]"
       >
-       {isOpen && <Waitlist close={() => modalFunction()} />}
+        {isOpen && <Waitlist close={() => modalFunction()} />}
         <div className="flex md+:flex-1">
           <button className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
@@ -46,8 +46,14 @@ export default function Navbar() {
           </button>
         </div>
         <div className="flex gap-4 md+:hidden">
-          <AnimatedButton text="Early Access" click={() => modalFunction()} icns="translate-x-[5.4rem]" />
-          
+          <div className="hidden xxs:block md+:hidden">
+            <AnimatedButton
+              text="Early Access"
+              click={() => modalFunction()}
+              icns="translate-x-[5.4rem]"
+            />
+          </div>
+
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
@@ -70,7 +76,11 @@ export default function Navbar() {
           ))}
         </div>
         <div className="hidden md+:flex md+:flex-1 md+:justify-end">
-          <AnimatedButton text="Early Access" click={() => modalFunction()} icns="translate-x-[5.4rem]"/>
+          <AnimatedButton
+            text="Early Access"
+            click={() => modalFunction()}
+            icns="translate-x-[5.4rem]"
+          />
         </div>
       </nav>
       <Dialog
@@ -80,16 +90,20 @@ export default function Navbar() {
       >
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-5 px-10 ">
-        {isOpen && <Waitlist close={() => modalFunction()} />}
+          {isOpen && <Waitlist close={() => modalFunction()} />}
           <div className="flex items-center justify-between">
-          <div className="flex md+:flex-1">
-          <button className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
-            <VentisLogo />
-          </button>
-        </div>
+            <div className="flex md+:flex-1">
+              <button className="-m-1.5 p-1.5">
+                <span className="sr-only">Your Company</span>
+                <VentisLogo />
+              </button>
+            </div>
             <div className="flex gap-4">
-              <AnimatedButton text="Early Access" click={() => modalFunction()} icns="translate-x-[5.4rem]"/>
+              <AnimatedButton
+                text="Early Access"
+                click={() => modalFunction()}
+                icns="translate-x-[5.4rem]"
+              />
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}

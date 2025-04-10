@@ -8,7 +8,7 @@ export default function HowItWorks() {
   return (
     <div className="primary-darkbg">
       <div className="Container">
-        <div className="grid gap-4 max-w-[346px] w-full">
+        <div className="grid gap-4 max-w-[34.6rem] w-full">
           <p
             data-aos="fade-up"
             style={{ color: "rgba(173, 172, 218, 1)" }}
@@ -23,7 +23,7 @@ export default function HowItWorks() {
             Plan Your Event in Just a Few Steps
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-2 gap-8 mt-8">
           <StepsCard
             num={one}
             title={"Search & Filter"}
