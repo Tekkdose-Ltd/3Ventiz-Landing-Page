@@ -22,7 +22,7 @@ export default function Waitlist({ close }) {
   const [linkHref, setLinkHref] = useState("");
   return (
     <>
-      <div className="fixed w-full bg-[#ffffff50] z-[10000] backdrop-blur-[5px] bottom-0 left-0 right-0 top-0 h-full">
+      <div className="fixed w-full bg-[#ffffff50] z-[10000] backdrop-blur-[.5rem] bottom-0 left-0 right-0 top-0 h-full">
         <div
           style={{ backgroundColor: "white" }}
           className=" shadow-2xl max-w-[452px] backdrop-blur-[5px] z-[1000000] w-full mx-auto abscenter rounded-[2rem] p-[2.4rem] px-[4rem]"

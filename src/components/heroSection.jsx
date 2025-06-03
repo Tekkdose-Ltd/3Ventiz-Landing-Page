@@ -117,7 +117,7 @@ const InputContainer = ({ open }) => {
   const [email, setEmail] = useState("");
   const [isActive, setIsActive] = useState(false);
   // https://9sxeaygjo0.execute-api.eu-north-1.amazonaws.com/
-  const url = `https://9sxeaygjo0.execute-api.eu-north-1.amazonaws.com/subscribe`;
+  const url = `https://jc2yevcbge.execute-api.eu-north-1.amazonaws.com/subscribe`;
 
   const handleSubmit = async () => {
     if (!email) return;

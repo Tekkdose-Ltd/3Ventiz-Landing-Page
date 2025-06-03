@@ -46,7 +46,7 @@ export default function Navbar() {
           </button>
         </div>
         <div className="flex gap-4 md+:hidden">
-          <div className="hidden xxs:block md+:hidden">
+          <div className="hidden xs:block md+:hidden">
             <AnimatedButton
               text="Early Access"
               click={() => modalFunction()}
