@@ -4,9 +4,9 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import { useEffect } from "react";
 import HomeScreen from "./pages";
-import TermsOfServiceScreen from "./pages/terms";
-import PrivacyPolicyScreen from "./pages/privacy";
 import { Footer, Navbar } from "./components";
+import PrivacyPolicyScreen from "./pages/privacy";
+import TermsOfServiceScreen from "./pages/terms";
 
 function App() {
   useEffect(() => {
