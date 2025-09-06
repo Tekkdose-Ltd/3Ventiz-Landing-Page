@@ -5,6 +5,7 @@ import VentisLogo from "./3ventis";
 import { Link } from "react-scroll";
 import AnimatedButton from "./button";
 import Waitlist from "./waitlist";
+import { useNavigate } from "react-router-dom";
 
 const navigation = [
   { name: "About us", href: "about-us" },
@@ -14,6 +15,7 @@ const navigation = [
 ];
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const scrollToSection = (id) => {
@@ -40,7 +42,7 @@ export default function Navbar() {
       >
         {isOpen && <Waitlist close={() => modalFunction()} />}
         <div className="flex md+:flex-1">
-          <button className="-m-1.5 p-1.5">
+          <button onClick={()=>navigate("/")} className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <VentisLogo />
           </button>

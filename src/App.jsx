@@ -1,17 +1,12 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import { useEffect } from "react";
-import {
-  About,
-  AnimatedButton,
-  Faqs,
-  Footer,
-  HeroSection,
-  HowItWorks,
-  Navbar,
-  UserSection,
-} from "./components";
+import HomeScreen from "./pages";
+import TermsOfServiceScreen from "./pages/terms";
+import PrivacyPolicyScreen from "./pages/privacy";
+import { Footer, Navbar } from "./components";
 
 function App() {
   useEffect(() => {
@@ -20,52 +15,21 @@ function App() {
       once: true,
     });
   }, []);
+
   return (
-    <main>
-      <Navbar />
-      <HeroSection />
-    
-      <section id="about-us">
-        <About />
-      </section>
-      <section id="how-it-works">
-        <HowItWorks />
-      </section>
-      <section id="our-users">
-        <UserSection />
-      </section>
-      <section id="faqs">
-        <Faqs />
-      </section>
-      <section className="Container py-24">
-        <div className="md+:max-w-[60rem] w-full mx-auto flex flex-col justify-start items-start gap-4 text-center">
-          <p
-            data-aos="fade-up"
-            className="text-[3rem] strong sm:text-[4rem] md+:text-[6.4rem] leading-[4.8rem] md+:leading-[7.2rem] font-medium "
-          >
-            Your Dream Event is Just a{" "}
-            <span className="relative bg-gradient-to-r from-[#171591] via-[#3B81AF]  to-[#3B81AF] bg-clip-text text-transparent">
-              Click Away
-            </span>{" "}
-          </p>
-          <p
-            data-aos="fade-up"
-            className="text-[1.4rem] leading-[2rem] text-color md+:max-w-[52.8rem] w-full mx-auto"
-          >
-            Join thousands of happy users who’ve discovered the easiest way to
-            plan their events. Whether you’re hosting or providing services,
-            3ventiz is your go-to platform for stress-free event management.
-          </p>
-          <div
-            data-aos="fade-up"
-            className="flex items-center justify-center w-full"
-          >
-            <AnimatedButton text="Join Waitlist" icns="translate-x-[5.4rem]" />
-          </div>
+      <Router>
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<HomeScreen />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyScreen />} />
+              <Route path="/terms-of-service" element={<TermsOfServiceScreen />} />
+            </Routes>
+          </main>
+          <Footer />
         </div>
-      </section>
-      <Footer />
-    </main>
+      </Router>
   );
 }
 

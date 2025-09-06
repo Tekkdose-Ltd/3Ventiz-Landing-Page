@@ -32,9 +32,6 @@ export default function Footer() {
 
   const handleSubmit = async () => {
     if (!email) return;
-    // e.preventDefault();
-    // console.log(email);
-
     try {
       setIsActive(true);
       const response = await fetch(url, {
@@ -63,14 +60,12 @@ export default function Footer() {
           alert(errors.message);
         }
       }
-
-      // console.log(response);
-      // console.log(await response.json());
     } catch (error) {
       console.log(error);
       setIsActive(false);
     }
   };
+
   const scrollToSection = (id) => {
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
@@ -223,11 +218,11 @@ export default function Footer() {
 
               <ul className="mt-6 space-y-4">
                 <li>
-                  <FooterText text={"Privacy Policy"} />
+                  <FooterText url={"/privacy-policy"} text={"Privacy Policy"} />
                 </li>
 
                 <li>
-                  <FooterText text={"Terms of Service"} />
+                  <FooterText url={"/terms-of-service"} text={"Terms of Service"} />
                 </li>
               </ul>
             </div>
@@ -257,13 +252,13 @@ export default function Footer() {
   );
 }
 
-const FooterText = ({ text }) => {
+const FooterText = ({ text, url }) => {
   return (
-    <p
+    <a href={url}
       data-aos="fade-up"
       className="font-medium text-[1.6rem] leading-[2.8rem]  text-white"
     >
       {text}
-    </p>
+    </a>
   );
 };
