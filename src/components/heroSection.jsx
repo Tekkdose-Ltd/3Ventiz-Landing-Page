@@ -122,7 +122,7 @@ const InputContainer = ({ open }) => {
   const handleSubmit = async () => {
     if (!email) return;
     // e.preventDefault();
-    console.log(email);
+    // console.log(email);
 
     try {
       setIsActive(true);
@@ -148,6 +148,9 @@ const InputContainer = ({ open }) => {
           alert(errors[0].message);
         } else {
           alert(errors.message);
+          if(errors.message.includes( "already added")){
+            setEmail("")
+          }
         }
       }
 

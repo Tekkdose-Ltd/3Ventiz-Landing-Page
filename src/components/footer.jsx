@@ -15,7 +15,7 @@ const navigation = [
 ];
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [isActive, setIsActive] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -29,6 +29,7 @@ export default function Footer() {
   };
 
   const url = `https://jc2yevcbge.execute-api.eu-north-1.amazonaws.com/subscribe`;
+  // olaniyan_seyi@yahoo.com already added to mailing list
 
   const handleSubmit = async () => {
     if (!email) return;
@@ -44,20 +45,23 @@ export default function Footer() {
         }),
       });
 
-      console.log(response)
+      // console.log(response)
 
       if (response.ok) {
         setEmail("");
         setIsActive(false);
-         modalFunction()
+        modalFunction();
       } else {
         const errors = await response.json();
         setIsActive(false);
-        console.log(errors)
+        console.log(errors);
         if (errors[0]) {
           alert(errors[0].message);
         } else {
           alert(errors.message);
+          if(errors.message.includes( "already added")){
+            setEmail("")
+          }
         }
       }
     } catch (error) {
@@ -71,7 +75,6 @@ export default function Footer() {
     console.log(element);
     element.scrollIntoView({ behavior: "smooth" });
   };
-
 
   return (
     <footer className="bg-white p-8">
@@ -91,7 +94,7 @@ export default function Footer() {
             </p>
 
             <div
-             data-aos="fade-up"
+              data-aos="fade-up"
               style={{
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
                 borderColor: "rgba(255, 255, 255, 0.1)",
@@ -107,26 +110,39 @@ export default function Footer() {
                 placeholder="name@email.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+               
               />
-              <button disabled={isActive} onClick={handleSubmit} className="bg-white primary-color font-semibold text-[1.2rem] sm:text-[1.4rem] px-2  xs:px-[1.6rem]  py-[1.2rem]  rounded-full ">
-              {!isActive?"Join waitlist":"sending..."}
+              <button
+                disabled={isActive}
+                onClick={handleSubmit}
+                className="bg-white primary-color font-semibold text-[1.2rem] sm:text-[1.4rem] px-2  xs:px-[1.6rem]  py-[1.2rem]  rounded-full "
+              >
+                {!isActive ? "Join waitlist" : "sending..."}
               </button>
             </div>
 
             <ul data-aos="fade-up" className="mt-8 flex items-center gap-10">
               <li>
-                <a href="https://www.linkedin.com/company/106094219/admin/dashboard/" rel="noreferrer" target="_blank" className="">
+                <a
+                  href="https://www.linkedin.com/company/106094219/admin/dashboard/"
+                  rel="noreferrer"
+                  target="_blank"
+                  className=""
+                >
                   <img src={linkedin} alt="footer logo" className="size-10" />
                 </a>
               </li>
               <li>
-                <a href="https://web.facebook.com/" rel="noreferrer" target="_blank" className="">
+                <a
+                  href="https://web.facebook.com/"
+                  rel="noreferrer"
+                  target="_blank"
+                  className=""
+                >
                   <span className="sr-only">Facebook</span>
                   <img src={facebook} alt="footer logo" className="size-10" />
                 </a>
               </li>
-
-             
 
               <li>
                 <a href="#" rel="noreferrer" target="_blank" className="">
@@ -141,7 +157,6 @@ export default function Footer() {
                   <img src={instagram} alt="footer logo" className="size-10" />
                 </a>
               </li>
-          
             </ul>
           </div>
 
@@ -155,7 +170,7 @@ export default function Footer() {
               </p>
 
               <ul className="mt-6 space-y-4">
-              {navigation.map((item) => (
+                {navigation.map((item) => (
                   <li>
                     <button
                       onClick={() => scrollToSection(item.href)}
@@ -165,7 +180,6 @@ export default function Footer() {
                     </button>
                   </li>
                 ))}
-              
               </ul>
             </div>
             <div>
@@ -206,7 +220,10 @@ export default function Footer() {
                 </li>
 
                 <li>
-                  <FooterText url={"/terms-of-service"} text={"Terms of Service"} />
+                  <FooterText
+                    url={"/terms-of-service"}
+                    text={"Terms of Service"}
+                  />
                 </li>
               </ul>
             </div>
@@ -214,7 +231,7 @@ export default function Footer() {
         </div>
 
         <img
-         data-aos="fade-up"
+          data-aos="fade-up"
           src={footer}
           alt="footer logo"
           className="ml-auto max-w-[29.2rem] md+:max-w-[58.4rem] w-full"
@@ -238,8 +255,9 @@ export default function Footer() {
 
 const FooterText = ({ text, url }) => {
   return (
-    <a href={url}
-    dis
+    <a
+      href={url}
+      dis
       data-aos="fade-up"
       className="font-medium text-[1.6rem] leading-[2.8rem]  text-white"
     >

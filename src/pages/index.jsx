@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   About,
   AnimatedButton,
@@ -7,8 +8,18 @@ import {
   UserSection,
   HeroSection,
 } from "../components";
+import Waitlist from "../components/waitlist";
 
 export default function HomeScreen() {
+  const [isOpen, setIsOpen] = useState(false);
+  const modalFunction = () => {
+    setIsOpen(!isOpen);
+    if (document.body.style.overflow !== "hidden") {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  };
   return (
     <div>
       <HeroSection />
@@ -47,10 +58,16 @@ export default function HomeScreen() {
             data-aos="fade-up"
             className="flex items-center justify-center w-full"
           >
-            <AnimatedButton text="Join Waitlist" icns="translate-x-[5.4rem]" />
+            <AnimatedButton
+              text="Gain Early Access"
+              icns="translate-x-[6.5rem]"
+              className={"!w-[18.1rem]"}
+              click={() => modalFunction()}
+            />
           </div>
         </div>
       </section>
+      {isOpen && <Waitlist close={() => modalFunction()} />}
     </div>
   );
 }

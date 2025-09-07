@@ -19,6 +19,7 @@ export default function Navbar() {
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  
   const scrollToSection = (id) => {
     setMobileMenuOpen(false);
     if (id === "/") {
