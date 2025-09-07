@@ -8,6 +8,7 @@ import Waitlist from "./waitlist";
 import { useNavigate } from "react-router-dom";
 
 const navigation = [
+  { name: "Home", href: "/" },
   { name: "About us", href: "about-us" },
   { name: "How It Works", href: "how-it-works" },
   { name: "Our users", href: "our-users" },
@@ -20,9 +21,13 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const scrollToSection = (id) => {
     setMobileMenuOpen(false);
-    const element = document.getElementById(id);
-    //console.log(element);
-    element.scrollIntoView({ behavior: "smooth" });
+    if (id === "/") {
+      navigate("/");
+    } else {
+      const element = document.getElementById(id);
+      //console.log(element);
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const modalFunction = () => {
@@ -42,7 +47,7 @@ export default function Navbar() {
       >
         {isOpen && <Waitlist close={() => modalFunction()} />}
         <div className="flex md+:flex-1">
-          <button onClick={()=>navigate("/")} className="-m-1.5 p-1.5">
+          <button onClick={() => navigate("/")} className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <VentisLogo />
           </button>

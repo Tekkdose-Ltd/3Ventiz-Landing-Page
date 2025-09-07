@@ -9,8 +9,8 @@ import Success from "./success";
 
 const navigation = [
   { name: "About us", href: "about-us" },
-  { name: "How It Works", href: "how-it-works" },
-  { name: "Our users", href: "our-users" },
+  // { name: "How It Works", href: "how-it-works" },
+  { name: "Contact us", href: "" },
   { name: "FAQs", href: "faqs" },
 ];
 
@@ -67,11 +67,11 @@ export default function Footer() {
   };
 
   const scrollToSection = (id) => {
-    setMobileMenuOpen(false);
     const element = document.getElementById(id);
     console.log(element);
     element.scrollIntoView({ behavior: "smooth" });
   };
+
 
   return (
     <footer className="bg-white p-8">
@@ -155,7 +155,7 @@ export default function Footer() {
               </p>
 
               <ul className="mt-6 space-y-4">
-              {/* {navigation.map((item) => (
+              {navigation.map((item) => (
                   <li>
                     <button
                       onClick={() => scrollToSection(item.href)}
@@ -164,24 +164,8 @@ export default function Footer() {
                       <FooterText text={item.name} />
                     </button>
                   </li>
-                ))} */}
-                <li>
-                  <a href="#">
-                    <FooterText text={"About us"} />
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <FooterText text={"Contact us"} />
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <FooterText text={"FAQs"} />
-                  </a>
-                </li>
+                ))}
+              
               </ul>
             </div>
             <div>
@@ -255,6 +239,7 @@ export default function Footer() {
 const FooterText = ({ text, url }) => {
   return (
     <a href={url}
+    dis
       data-aos="fade-up"
       className="font-medium text-[1.6rem] leading-[2.8rem]  text-white"
     >
